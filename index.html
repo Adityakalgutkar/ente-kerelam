@@ -1,5 +1,9 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Ente Keralam</title>
-<meta name="claude:viewport-fit-sides" content="cover">
 <meta name="description" content="Ente Keralam is a Kerala cuisine restaurant opening soon in Mapusa, Goa. Bold flavours, authentic recipes and the warmth of Kerala.">
 <meta property="og:title" content="Ente Keralam — Kerala cuisine, coming soon to Mapusa">
 <meta property="og:description" content="Bold flavours, authentic recipes and the warmth of Kerala, coming soon to Goa.">
@@ -14,6 +18,12 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gloock&family=Hanken+Grotesk:ital,wght@0,400;0,500;0,600;1,400&family=Noto+Serif+Malayalam:wght@400;600&display=swap">
 
 <style>
+/* Base reset */
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{margin:0}
+[hidden]{display:none!important}
+img{max-width:100%;height:auto}
+
 /* Layout concept: a kasavu-bordered ledger — deep forest bands bookend coconut-cream editorial pages,
    gold kasavu stripes mark every threshold, Malayalam script carries the brand voice. */
 :root{
@@ -396,7 +406,8 @@ section{position:relative}
   .map-card{margin:12px}
 }
 </style>
-
+</head>
+<body>
 <a class="skip" href="#main">Skip to content</a>
 
 <div class="draft-bar" id="draft-bar" hidden>
@@ -960,3 +971,5 @@ if ("IntersectionObserver" in window){
   draw(); addEventListener("resize", draw, { passive:true });
 })();
 </script>
+</body>
+</html>
