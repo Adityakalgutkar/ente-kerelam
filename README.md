@@ -6,7 +6,22 @@ Pre-launch website for **Ente Keralam**, a Kerala cuisine restaurant opening soo
 
 **Live draft:** https://claude.ai/artifact/NS7YbZyWC5XbKezCd49VJC (private until shared from the page's Share menu)
 **Status:** Draft v3 · 10 Nov 2026
-**Files:** `index.html` (the whole site: markup, styles and script) and `images/` (31 photos).
+**Pages**
+| File | Page | Contents |
+|---|---|---|
+| `index.html` | Home | Hero, launch line, dish marquee, story intro, menu preview, The Kerala Experience, visit band |
+| `story.html` | Our Story | The name and Kerala cooking, The Kerala Experience |
+| `menu.html` | Menu | Sample menu with categories and veg filter, Kerala food glossary |
+| `gallery.html` | Gallery | Photo grid with captions and a full-screen viewer |
+| `contact.html` | Contact | Location, contact placeholders, WhatsApp, map placeholder |
+
+**Shared files**
+- `assets/css/styles.css`: all styles for every page
+- `assets/js/content.js`: all editable content (contact details, photos, menu, credits)
+- `assets/js/main.js`: shared behaviour (navigation, menu, gallery viewer, reveals)
+- `images/`: 31 photos
+
+The header, footer and mobile action bar are repeated in each HTML file; change all five when editing them. Menu categories can be linked directly, e.g. `menu.html#coast`.
 
 **Run locally:** open `index.html` in a browser, or serve the folder with any static server, e.g. `npx serve .`
 
@@ -23,7 +38,7 @@ Pre-launch website for **Ente Keralam**, a Kerala cuisine restaurant opening soo
 - Gallery: 8 photos with captions and a viewer with previous/next and swipe
 - Find Us: Mapusa, Goa; address, phone, WhatsApp and hours all "To be announced"; Google Maps search link
 - Footer: navigation, visit details, social placeholders, photo credits
-- Draft preview strip at the top (turn off with `draft: false` in SITE config)
+- Draft preview strip at the top of every page (turn off with `draft: false` in `content.js`)
 
 ## Design direction
 - Colours: deep forest green, coconut cream, antique brass, teak brown, banana-leaf green
@@ -32,7 +47,7 @@ Pre-launch website for **Ente Keralam**, a Kerala cuisine restaurant opening soo
 - Light and dark mode supported
 
 ## How to update content
-Everything editable sits in the CONTENT CONFIG block in the `<script>` at the bottom of `index.html`:
+Everything editable sits in `assets/js/content.js`:
 - `SITE`: address, phone, whatsapp (digits with country code), hours, mapsUrl, social links, draft flag
 - `PHOTOS` / `GALLERY`: image path + alt text for each slot
 - `MENU`: categories and dishes; set `price` to a number and `sample: false` for real items

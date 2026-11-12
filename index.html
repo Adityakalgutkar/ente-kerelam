@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Ente Keralam</title>
 <meta name="description" content="Ente Keralam is a Kerala cuisine restaurant opening soon in Mapusa, Goa. Bold flavours, authentic recipes and the warmth of Kerala.">
-<meta property="og:title" content="Ente Keralam — Kerala cuisine, coming soon to Mapusa">
-<meta property="og:description" content="Bold flavours, authentic recipes and the warmth of Kerala, coming soon to Goa.">
+<meta property="og:title" content="Ente Keralam">
+<meta property="og:description" content="Ente Keralam is a Kerala cuisine restaurant opening soon in Mapusa, Goa. Bold flavours, authentic recipes and the warmth of Kerala.">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#16291f">
 <script type="application/ld+json">
@@ -17,395 +17,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gloock&family=Hanken+Grotesk:ital,wght@0,400;0,500;0,600;1,400&family=Noto+Serif+Malayalam:wght@400;600&display=swap">
 
-<style>
-/* Base reset */
-html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
-body{margin:0}
-[hidden]{display:none!important}
-img{max-width:100%;height:auto}
-
-/* Layout concept: a kasavu-bordered ledger — deep forest bands bookend coconut-cream editorial pages,
-   gold kasavu stripes mark every threshold, Malayalam script carries the brand voice. */
-:root{
-  --forest:#16291f;      /* deep forest, used for bands in both themes */
-  --forest-2:#1f3a2c;
-  --leaf:#3e6a3c;        /* banana leaf */
-  --brass:#b38a4c;       /* antique brass / kasavu gold */
-  --brass-soft:#d7b97f;
-  --teak:#5b3d29;        /* wooden craftsmanship */
-  --paper:#f2ecdf;       /* coconut cream */
-  --paper-2:#e9e1cf;
-  --ink:#1f2a22;
-  --ink-soft:#56604f;
-  --line:rgba(31,42,34,.16);
-  --on-forest:#efe8d8;
-  --on-forest-soft:rgba(239,232,216,.72);
-  --card:#f8f4ea;
-
-  --f-display:"Gloock","Iowan Old Style","Palatino Linotype",Georgia,serif;
-  --f-body:"Hanken Grotesk","Segoe UI",system-ui,-apple-system,sans-serif;
-  --f-ml:"Noto Serif Malayalam","Manjari","Kartika",serif;
-
-  --s-1:clamp(2.6rem,6.4vw,5.6rem);  /* hero */
-  --s-2:clamp(2rem,4.2vw,3.4rem);    /* section title */
-  --s-3:clamp(1.3rem,2vw,1.6rem);    /* sub title */
-  --s-body:1.0625rem;
-  --s-small:.8125rem;
-
-  --gutter:max(16px,env(safe-area-inset-left,0px));
-  --gutter-r:max(16px,env(safe-area-inset-right,0px));
-  --wrap:1200px;
-  --ease:cubic-bezier(.2,.7,.2,1);
-}
-@media (prefers-color-scheme:dark){
-  :root:not([data-theme="light"]){
-    --forest:#0f1d16; --forest-2:#17291f; --leaf:#5f8c55; --brass:#c9a265; --brass-soft:#e0c48e; --teak:#c39a78;
-    --paper:#141a15; --paper-2:#1a221b; --ink:#ece5d4; --ink-soft:#a8ad9c; --line:rgba(236,229,212,.14);
-    --on-forest:#efe8d8; --on-forest-soft:rgba(239,232,216,.7); --card:#1b231c; color-scheme:dark;
-  }
-}
-:root[data-theme="dark"]{
-  --forest:#0f1d16; --forest-2:#17291f; --leaf:#5f8c55; --brass:#c9a265; --brass-soft:#e0c48e; --teak:#c39a78;
-  --paper:#141a15; --paper-2:#1a221b; --ink:#ece5d4; --ink-soft:#a8ad9c; --line:rgba(236,229,212,.14);
-  --on-forest:#efe8d8; --on-forest-soft:rgba(239,232,216,.7); --card:#1b231c; color-scheme:dark;
-}
-
-*,*::before,*::after{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:84px}
-body{background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:var(--s-body);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--forest)}
-h1,h2,h3{font-family:var(--f-display);font-weight:400;line-height:1.05;margin:0;text-wrap:balance;letter-spacing:-.01em}
-p{margin:0}
-a{color:inherit}
-img{display:block;max-width:100%}
-:focus-visible{outline:2px solid var(--brass);outline-offset:3px;border-radius:2px}
-.wrap{max-width:var(--wrap);margin-inline:auto;padding-left:var(--gutter);padding-right:var(--gutter-r)}
-.ml{font-family:var(--f-ml)}
-.eyebrow{font-size:var(--s-small);letter-spacing:.16em;text-transform:uppercase;font-weight:600;color:var(--brass)}
-.skip{position:absolute;left:-999px;top:8px;background:var(--brass);color:var(--forest);padding:8px 14px;z-index:100}
-.skip:focus{left:16px}
-
-/* Kasavu: the gold border of Kerala's handwoven mundu, used as the threshold device */
-.kasavu{height:16px;background:
-  linear-gradient(to bottom,transparent 0 3px,var(--brass) 3px 7px,transparent 7px 10px,var(--brass) 10px 11px,transparent 11px)}
-.kasavu.thin{height:8px;background:linear-gradient(to bottom,var(--brass) 0 2px,transparent 2px 5px,var(--brass) 5px 6px,transparent 6px)}
-
-/* Buttons */
-.btn{display:inline-flex;align-items:center;gap:.6em;min-height:48px;padding:.75em 1.4em;border-radius:999px;font:600 .95rem/1 var(--f-body);letter-spacing:.02em;text-decoration:none;border:1px solid transparent;cursor:pointer;transition:background .25s var(--ease),color .25s var(--ease),border-color .25s var(--ease),transform .25s var(--ease)}
-.btn svg{width:18px;height:18px;flex:none}
-.btn-brass{background:var(--brass);color:#14231b}
-.btn-brass:hover{background:var(--brass-soft)}
-.btn-ghost{border-color:rgba(239,232,216,.38);color:var(--on-forest)}
-.btn-ghost:hover{border-color:var(--brass-soft);color:var(--brass-soft)}
-.btn-ink{border-color:var(--line);color:var(--ink)}
-.btn-ink:hover{border-color:var(--brass);color:var(--brass)}
-.btn:active{transform:translateY(1px)}
-
-/* ---------- Header ---------- */
-.site-header{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--forest);color:var(--on-forest);border-bottom:1px solid rgba(179,138,76,.25)}
-.nav{display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:72px}
-.brand{display:flex;flex-direction:column;text-decoration:none;line-height:1}
-.brand-en{font-family:var(--f-display);font-size:1.45rem;letter-spacing:.01em}
-.brand-ml{font-family:var(--f-ml);font-size:.72rem;color:var(--brass-soft);margin-top:5px;letter-spacing:.02em}
-.nav-links{display:flex;align-items:center;gap:30px;list-style:none;margin:0;padding:0}
-.nav-links a{text-decoration:none;font-size:.92rem;font-weight:500;color:var(--on-forest-soft);position:relative;padding-block:6px;transition:color .2s}
-.nav-links a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--brass);transform:scaleX(0);transform-origin:left;transition:transform .3s var(--ease)}
-.nav-links a:hover,.nav-links a[aria-current="true"]{color:var(--on-forest)}
-.nav-links a:hover::after,.nav-links a[aria-current="true"]::after{transform:scaleX(1)}
-.nav-cta{min-height:42px;padding:.6em 1.15em;font-size:.88rem}
-.menu-toggle{display:none;background:none;border:1px solid rgba(239,232,216,.3);color:var(--on-forest);width:46px;height:46px;border-radius:50%;cursor:pointer;align-items:center;justify-content:center}
-.menu-toggle span,.menu-toggle span::before,.menu-toggle span::after{display:block;width:18px;height:1.5px;background:currentColor;position:relative;transition:transform .3s var(--ease),background .2s}
-.menu-toggle span::before,.menu-toggle span::after{content:"";position:absolute;left:0}
-.menu-toggle span::before{top:-6px}.menu-toggle span::after{top:6px}
-.menu-toggle[aria-expanded="true"] span{background:transparent}
-.menu-toggle[aria-expanded="true"] span::before{transform:translateY(6px) rotate(45deg)}
-.menu-toggle[aria-expanded="true"] span::after{transform:translateY(-6px) rotate(-45deg)}
-
-@media (max-width:900px){
-  .menu-toggle{display:inline-flex}
-  .nav-panel{position:fixed;inset:calc(72px + env(safe-area-inset-top,0px)) 0 auto 0;background:var(--forest);padding:12px var(--gutter-r) 28px var(--gutter);border-bottom:1px solid rgba(179,138,76,.3);transform:translateY(-8px);opacity:0;visibility:hidden;transition:opacity .25s var(--ease),transform .25s var(--ease),visibility 0s .25s}
-  .nav-panel.open{opacity:1;transform:none;visibility:visible;transition:opacity .25s var(--ease),transform .25s var(--ease)}
-  .nav-links{flex-direction:column;align-items:stretch;gap:0}
-  .nav-links a{display:block;font-family:var(--f-display);font-size:1.6rem;color:var(--on-forest);padding-block:12px;border-bottom:1px solid rgba(239,232,216,.1)}
-  .nav-links a::after{display:none}
-  .nav-panel .nav-cta{margin-top:20px;width:100%;justify-content:center;min-height:52px;font-size:1rem}
-}
-@media (min-width:901px){.nav-panel{display:flex;align-items:center;gap:34px}}
-
-/* ---------- Photo plates (art-directed placeholders → real photos) ---------- */
-.photo{position:relative;overflow:hidden;background:var(--tone,var(--forest-2));isolation:isolate;max-width:100%}
-.photo img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease)}
-.photo.is-plate::before{content:"";position:absolute;inset:0;z-index:-1;background:
-  radial-gradient(120% 90% at var(--lx,30%) var(--ly,25%),rgba(255,236,200,.28),transparent 55%),
-  radial-gradient(90% 80% at 85% 100%,rgba(0,0,0,.35),transparent 60%),
-  var(--tone,var(--forest-2))}
-.photo.is-plate::after{content:"";position:absolute;inset:0;z-index:-1;opacity:.35;mix-blend-mode:overlay;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
-.plate-label{position:absolute;inset:auto 0 0 0;padding:14px 16px;display:flex;flex-direction:column;gap:2px;color:rgba(250,244,230,.92);background:linear-gradient(to top,rgba(10,16,12,.55),transparent)}
-.plate-label b{font:600 .66rem/1.2 var(--f-body);letter-spacing:.18em;text-transform:uppercase;color:var(--brass-soft)}
-.plate-label span{font-size:.84rem;line-height:1.35;max-width:34ch}
-.plate-mark{position:absolute;top:14px;left:16px;font-family:var(--f-ml);font-size:clamp(1.8rem,5vw,3rem);color:rgba(250,240,215,.16);line-height:1}
-.t-leaf{--tone:#2f5a2e}.t-curry{--tone:#9a6a22}.t-brass{--tone:#7a5a2c}.t-teak{--tone:#4a2f1f}.t-sea{--tone:#24474a}.t-rice{--tone:#a39675}.t-ember{--tone:#7c3b1e}.t-night{--tone:#1b2c22}
-
-/* ---------- Hero ---------- */
-.hero{background:var(--forest);color:var(--on-forest);position:relative;overflow:hidden}
-.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(32px,5vw,72px);align-items:center;padding-block:clamp(48px,8vw,104px) clamp(56px,8vw,96px)}
-.hero-copy{min-width:0;position:relative;z-index:2}
-.status{display:inline-flex;align-items:center;gap:10px;padding:8px 14px 8px 12px;border:1px solid rgba(179,138,76,.45);border-radius:999px;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;font-weight:600;color:var(--brass-soft)}
-.flame{width:8px;height:8px;border-radius:50%;background:var(--brass-soft);box-shadow:0 0 0 0 rgba(215,185,127,.6);animation:flicker 2.6s ease-in-out infinite}
-@keyframes flicker{0%,100%{box-shadow:0 0 0 0 rgba(215,185,127,.55)}50%{box-shadow:0 0 0 7px rgba(215,185,127,0)}}
-.hero h1{font-size:var(--s-1);margin-top:28px;letter-spacing:-.02em}
-.hero h1 em{font-style:normal;color:var(--brass-soft);display:block}
-.hero-lede{margin-top:24px;font-size:clamp(1.05rem,1.4vw,1.2rem);color:var(--on-forest-soft);max-width:44ch}
-.hero-ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
-.hero-ml{position:absolute;right:-.06em;bottom:-.18em;font-family:var(--f-ml);font-weight:600;font-size:clamp(5rem,17vw,15rem);line-height:1;color:rgba(239,232,216,.04);white-space:nowrap;pointer-events:none;z-index:1;user-select:none}
-.hero-art{position:relative;min-width:0;z-index:2;padding-bottom:12%}
-.hero-art .main{aspect-ratio:4/5;border-radius:999px 999px 6px 6px;box-shadow:0 30px 60px -30px rgba(0,0,0,.6)}
-.arch-line{position:absolute;inset:-12px -12px calc(12% - 12px) -12px;border:1px solid rgba(179,138,76,.5);border-radius:999px 999px 10px 10px;pointer-events:none}
-.hero-art .inset{position:absolute;left:-14%;bottom:0;width:46%;aspect-ratio:1;border-radius:50%;border:6px solid var(--forest);box-shadow:0 20px 40px -20px rgba(0,0,0,.6)}
-.hero-art .inset .plate-label{padding:10px 12px 22%;text-align:center;align-items:center;background:none}
-.hero-art .inset .plate-label span{font-size:.74rem}
-.hero-note{display:flex;gap:28px;flex-wrap:wrap;margin-top:44px;padding-top:22px;border-top:1px solid rgba(239,232,216,.12);font-size:.88rem;color:var(--on-forest-soft)}
-.hero-note strong{display:block;font-weight:600;color:var(--on-forest);font-size:.95rem}
-
-/* ---------- Launch band ---------- */
-.band{background:var(--forest-2);color:var(--on-forest)}
-.band .wrap{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:12px 32px;padding-block:26px}
-.band p{font-family:var(--f-display);font-size:clamp(1.25rem,2.4vw,1.9rem);line-height:1.2}
-.band p span{color:var(--brass-soft)}
-.band small{font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;color:var(--on-forest-soft)}
-
-/* ---------- Sections ---------- */
-section{position:relative}
-.section{padding-block:clamp(72px,10vw,136px)}
-.section-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px 48px;align-items:end;margin-bottom:clamp(36px,5vw,64px)}
-.section-head h2{font-size:var(--s-2);margin-top:14px}
-.section-head p{color:var(--ink-soft);max-width:50ch}
-
-/* Story */
-.story-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(32px,6vw,96px);align-items:start}
-.story-art{position:relative}
-.story-art .tall{aspect-ratio:3/4;border-radius:4px}
-.story-art .small{position:absolute;right:-10%;bottom:-8%;width:52%;aspect-ratio:1;border-radius:4px;border:8px solid var(--paper)}
-.story-copy{min-width:0;padding-top:clamp(0px,3vw,40px)}
-.meaning{display:grid;grid-template-columns:auto 1fr;gap:6px 22px;align-items:baseline;padding:22px 0;border-block:1px solid var(--line);margin-block:28px 32px}
-.meaning .ml{font-size:clamp(1.8rem,3.4vw,2.6rem);color:var(--leaf);line-height:1.3;grid-row:span 2}
-.meaning .pron{font-family:var(--f-display);font-size:1.25rem}
-.meaning .gloss{font-size:.9rem;color:var(--ink-soft)}
-.story-copy h2{font-size:var(--s-2);margin-top:14px}
-.story-copy .lead{font-family:var(--f-display);font-size:clamp(1.25rem,1.9vw,1.55rem);line-height:1.35;max-width:32ch}
-.story-copy p + p{margin-top:16px}
-.story-copy .body{color:var(--ink-soft);max-width:58ch}
-.pending{display:flex;gap:12px;align-items:flex-start;margin-top:30px;padding:16px 18px;background:var(--paper-2);border-radius:6px;font-size:.9rem;color:var(--ink-soft);max-width:58ch}
-.pending::before{content:"";flex:none;width:8px;height:8px;margin-top:8px;border-radius:50%;background:var(--brass)}
-
-/* Menu */
-.menu{background:var(--paper-2)}
-.notice{display:inline-flex;align-items:center;gap:10px;font-size:.82rem;font-weight:600;letter-spacing:.06em;color:var(--teak);border:1px dashed color-mix(in srgb,var(--teak) 55%,transparent);border-radius:999px;padding:7px 14px;margin-top:18px}
-.tabs{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;padding-bottom:2px;margin-bottom:36px;border-bottom:1px solid var(--line)}
-.tabs::-webkit-scrollbar{display:none}
-.tab{flex:none;background:none;border:0;border-bottom:2px solid transparent;margin-bottom:-1px;padding:12px 16px 14px;font:500 1rem/1 var(--f-body);color:var(--ink-soft);cursor:pointer;transition:color .2s,border-color .2s;white-space:nowrap}
-.tab:hover{color:var(--ink)}
-.tab[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--brass);font-weight:600}
-.tab-intro{font-family:var(--f-display);font-size:var(--s-3);margin-bottom:24px;max-width:46ch}
-.dish-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(16px,2.4vw,28px)}
-.dish{background:var(--card);border-radius:6px;overflow:hidden;display:flex;flex-direction:column;transition:transform .4s var(--ease),box-shadow .4s var(--ease)}
-.dish:hover{transform:translateY(-4px);box-shadow:0 24px 40px -28px rgba(30,25,15,.45)}
-.dish:hover .photo img{transform:scale(1.04)}
-.dish .photo{aspect-ratio:4/3}
-.dish .plate-label span{font-size:.78rem}
-.dish-body{padding:20px 22px 22px;display:flex;flex-direction:column;gap:8px;flex:1}
-.dish-top{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
-.dish h3{font-size:1.35rem}
-.price{font-variant-numeric:tabular-nums;font-weight:600;color:var(--teak);white-space:nowrap}
-.dish p{font-size:.94rem;color:var(--ink-soft)}
-.tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:auto;padding-top:10px}
-.tag{font-size:.7rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:4px 9px;border-radius:999px;border:1px solid var(--line);color:var(--ink-soft)}
-.tag.sample{border-color:color-mix(in srgb,var(--brass) 60%,transparent);color:var(--teak)}
-.tag.veg{color:var(--leaf);border-color:color-mix(in srgb,var(--leaf) 50%,transparent)}
-.menu-foot{display:flex;flex-wrap:wrap;gap:16px 28px;align-items:center;justify-content:space-between;margin-top:44px;padding-top:24px;border-top:1px solid var(--line);font-size:.92rem;color:var(--ink-soft)}
-
-/* Experience */
-.exp{background:var(--forest);color:var(--on-forest)}
-.exp .section-head p{color:var(--on-forest-soft)}
-.exp-grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:clamp(16px,2.4vw,28px)}
-.exp-item{grid-column:span 3;display:flex;flex-direction:column;gap:18px;min-width:0}
-.exp-item:nth-child(even){margin-top:clamp(0px,6vw,72px)}
-.exp-item .photo{aspect-ratio:3/4;border-radius:4px}
-.exp-item h3{font-size:1.45rem;color:var(--on-forest)}
-.exp-item p{font-size:.95rem;color:var(--on-forest-soft)}
-.exp-item .ml{font-size:.95rem;color:var(--brass-soft);display:block;margin-bottom:4px}
-
-/* Gallery */
-.gallery-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));grid-auto-rows:clamp(120px,15vw,200px);gap:clamp(10px,1.4vw,16px)}
-.g{border-radius:4px;cursor:default}
-.g.has-img{cursor:zoom-in}
-.g .photo{width:100%;height:100%}
-.g:hover .photo img{transform:scale(1.04)}
-.g1{grid-column:span 3;grid-row:span 2}.g2{grid-column:span 3}.g3{grid-column:span 2}.g4{grid-column:span 1}
-.g5{grid-column:span 2;grid-row:span 2}.g6{grid-column:span 2}.g7{grid-column:span 2;grid-row:span 2}.g8{grid-column:span 2}
-.g button{all:unset;cursor:zoom-in;display:block;width:100%;height:100%;border-radius:4px;overflow:hidden}
-.g button:focus-visible{outline:2px solid var(--brass);outline-offset:3px}
-.lightbox{position:fixed;inset:0;z-index:90;background:rgba(10,16,12,.92);display:flex;align-items:center;justify-content:center;padding:max(24px,env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) max(24px,env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
-.lightbox img{max-height:86vh;width:auto;border-radius:4px}
-.lightbox-close{position:absolute;top:calc(16px + env(safe-area-inset-top,0px));right:calc(16px + env(safe-area-inset-right,0px));background:none;border:1px solid rgba(255,255,255,.35);color:#fff;border-radius:999px;padding:10px 16px;cursor:pointer;font:600 .85rem var(--f-body)}
-
-/* Contact */
-.contact-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(28px,5vw,72px);align-items:stretch}
-.contact-copy h2{font-size:var(--s-2);margin-top:14px}
-.contact-copy>p{color:var(--ink-soft);margin-top:18px;max-width:44ch}
-.facts{list-style:none;margin:32px 0 0;padding:0;display:grid}
-.facts li{display:grid;grid-template-columns:120px minmax(0,1fr);gap:16px;padding:16px 0;border-top:1px solid var(--line)}
-.facts li:last-child{border-bottom:1px solid var(--line)}
-.facts dt,.facts .k{font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--ink-soft);padding-top:3px}
-.facts .v{font-weight:500}
-.facts .tba{color:var(--ink-soft);font-weight:400;font-style:italic}
-.contact-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
-.contact-actions .btn-brass{color:#14231b}
-.map{position:relative;border-radius:6px;overflow:hidden;min-height:380px;background:var(--forest-2);color:var(--on-forest);display:flex;flex-direction:column;justify-content:flex-end}
-.map canvas{position:absolute;inset:0;width:100%;height:100%}
-.map-card{position:relative;margin:20px;padding:20px 22px;background:color-mix(in srgb,var(--forest) 88%,transparent);backdrop-filter:blur(4px);border:1px solid rgba(179,138,76,.35);border-radius:6px;display:flex;flex-wrap:wrap;gap:14px 24px;align-items:center;justify-content:space-between}
-.map-card h3{font-size:1.5rem}
-.map-card p{font-size:.88rem;color:var(--on-forest-soft)}
-.pin{position:absolute;left:50%;top:42%;transform:translate(-50%,-100%);display:flex;flex-direction:column;align-items:center;gap:6px;pointer-events:none}
-.pin i{width:18px;height:18px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);background:var(--brass);box-shadow:0 0 0 6px rgba(179,138,76,.22)}
-.pin span{font:600 .72rem/1 var(--f-body);letter-spacing:.14em;text-transform:uppercase;background:var(--forest);padding:6px 9px;border-radius:3px;color:var(--brass-soft)}
-
-/* Footer */
-.footer{background:var(--forest);color:var(--on-forest-soft);font-size:.92rem}
-.footer-grid{display:grid;grid-template-columns:minmax(0,1.4fr) repeat(3,minmax(0,1fr));gap:36px;padding-block:64px 40px}
-.footer .brand-en{font-size:2rem;color:var(--on-forest)}
-.footer .brand-ml{font-size:.9rem}
-.footer h4{margin:0 0 14px;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--brass-soft);font-weight:600}
-.footer ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}
-.footer a{text-decoration:none;transition:color .2s}
-.footer a:hover{color:var(--on-forest)}
-.footer .tagline{margin-top:18px;max-width:34ch}
-.soon{font-size:.72rem;letter-spacing:.08em;color:rgba(239,232,216,.45);margin-left:6px}
-.credits{padding-block:0 28px;font-size:.8rem;color:rgba(239,232,216,.55)}
-.credits summary{cursor:pointer;color:var(--on-forest-soft);font-weight:600;letter-spacing:.06em;width:max-content;max-width:100%}
-.credits summary:hover{color:var(--on-forest)}
-.credits p{margin-top:12px;max-width:70ch}
-.credits ul{list-style:none;margin:12px 0 0;padding:0;columns:2 320px;column-gap:32px}
-.credits li{break-inside:avoid;padding-block:3px;overflow-wrap:anywhere}
-.credits a{text-decoration:underline;text-decoration-color:rgba(239,232,216,.25);text-underline-offset:2px}
-.footer-base{display:flex;flex-wrap:wrap;gap:12px 24px;justify-content:space-between;padding-block:22px;border-top:1px solid rgba(239,232,216,.1);font-size:.8rem;color:rgba(239,232,216,.5)}
-
-
-/* Draft ribbon (turn off with SITE.draft = false) */
-.draft-bar{background:var(--brass);color:#14231b;font-size:.8rem;font-weight:500}
-.draft-bar .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-block:8px}
-.draft-bar b{font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-right:6px}
-.draft-bar button{flex:none;background:none;border:1px solid rgba(20,35,27,.35);border-radius:999px;padding:4px 12px;font:600 .75rem var(--f-body);color:inherit;cursor:pointer}
-
-/* Dish-name marquee */
-.marquee{background:var(--forest);color:var(--on-forest);overflow:hidden;border-top:1px solid rgba(239,232,216,.08);padding-block:18px}
-.marquee-track{display:flex;width:max-content;animation:marquee 60s linear infinite}
-.marquee:hover .marquee-track{animation-play-state:paused}
-.marquee-group{display:flex;align-items:baseline;flex:none}
-.marquee-group span{font-family:var(--f-display);font-size:clamp(1.15rem,2vw,1.5rem);padding-inline:22px;white-space:nowrap}
-.marquee-group .ml{font-family:var(--f-ml);color:var(--brass-soft);font-size:clamp(1rem,1.7vw,1.25rem)}
-.marquee-group i{width:6px;height:6px;border-radius:50%;background:var(--brass);align-self:center;flex:none}
-@keyframes marquee{to{transform:translateX(-50%)}}
-
-/* Menu toolbar + veg filter */
-.menu-bar{display:flex;align-items:flex-end;gap:16px 24px;flex-wrap:wrap;border-bottom:1px solid var(--line);margin-bottom:36px}
-.menu-bar .tabs{border-bottom:0;margin-bottom:0;flex:1 1 420px;min-width:0}
-.veg-toggle{display:inline-flex;align-items:center;gap:10px;padding:10px 0 14px;font-size:.9rem;font-weight:500;color:var(--ink-soft);cursor:pointer;user-select:none}
-.veg-toggle input{position:absolute;opacity:0;pointer-events:none}
-.veg-toggle .sw{width:40px;height:22px;border-radius:999px;background:var(--line);position:relative;transition:background .25s var(--ease);flex:none}
-.veg-toggle .sw::after{content:"";position:absolute;top:3px;left:3px;width:16px;height:16px;border-radius:50%;background:var(--card);box-shadow:0 1px 3px rgba(0,0,0,.25);transition:transform .25s var(--ease)}
-.veg-toggle input:checked + .sw{background:var(--leaf)}
-.veg-toggle input:checked + .sw::after{transform:translateX(18px)}
-.veg-toggle input:focus-visible + .sw{outline:2px solid var(--brass);outline-offset:3px}
-.veg-mark{display:inline-grid;place-items:center;width:14px;height:14px;border:1.5px solid var(--leaf);border-radius:2px;flex:none}
-.veg-mark::after{content:"";width:6px;height:6px;border-radius:50%;background:var(--leaf)}
-.veg-mark.nv{border-color:#a3422a}.veg-mark.nv::after{background:#a3422a}
-.menu-empty{grid-column:1/-1;padding:40px 0;color:var(--ink-soft)}
-
-/* Glossary */
-.glossary-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;border-top:1px solid var(--line)}
-.term{padding:26px 24px 28px 0;border-bottom:1px solid var(--line);display:flex;flex-direction:column;gap:6px;min-width:0}
-.term:not(:nth-child(4n+1)){padding-left:24px;border-left:1px solid var(--line)}
-.term .ml{font-size:1.5rem;color:var(--leaf);line-height:1.4}
-.term dt{font-family:var(--f-display);font-size:1.4rem;line-height:1.1}
-.term .say{font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--brass);font-weight:600}
-.term dd{margin:4px 0 0;font-size:.93rem;color:var(--ink-soft)}
-
-/* Gallery captions + lightbox nav */
-.g{position:relative}
-.g figcaption{position:absolute;inset:auto 0 0 0;padding:28px 14px 12px;font-size:.82rem;color:#f6efdf;background:linear-gradient(to top,rgba(10,16,12,.7),transparent);opacity:0;transform:translateY(6px);transition:opacity .3s var(--ease),transform .3s var(--ease);pointer-events:none;text-align:left}
-.g:hover figcaption,.g button:focus-visible figcaption{opacity:1;transform:none}
-.lightbox figure{margin:0;display:flex;flex-direction:column;align-items:center;gap:14px;max-width:min(1100px,100%)}
-.lightbox figcaption{color:rgba(246,239,223,.8);font-size:.9rem;text-align:center}
-.lightbox figcaption b{color:var(--brass-soft);font-weight:600;margin-right:8px;font-variant-numeric:tabular-nums}
-.lb-nav{position:absolute;top:50%;transform:translateY(-50%);width:48px;height:48px;border-radius:50%;border:1px solid rgba(255,255,255,.3);background:rgba(10,16,12,.4);color:#fff;cursor:pointer;display:grid;place-items:center}
-.lb-nav:hover{border-color:var(--brass-soft);color:var(--brass-soft)}
-.lb-nav svg{width:20px;height:20px}
-.lb-prev{left:calc(16px + env(safe-area-inset-left,0px))}.lb-next{right:calc(16px + env(safe-area-inset-right,0px))}
-
-/* Mobile action bar */
-.action-bar{display:none}
-@media (max-width:860px){
-  .action-bar{display:grid;grid-template-columns:repeat(3,1fr);position:fixed;left:0;right:0;bottom:0;z-index:45;background:var(--forest);border-top:1px solid rgba(179,138,76,.35);padding:8px max(10px,env(safe-area-inset-right,0px)) calc(8px + env(safe-area-inset-bottom,0px)) max(10px,env(safe-area-inset-left,0px));gap:8px}
-  .action-bar a,.action-bar span{display:flex;flex-direction:column;align-items:center;gap:3px;padding:6px 4px;border-radius:8px;text-decoration:none;color:var(--on-forest);font-size:.72rem;font-weight:600;letter-spacing:.04em}
-  .action-bar svg{width:20px;height:20px}
-  .action-bar .primary{background:var(--brass);color:#14231b}
-  .action-bar [aria-disabled="true"]{opacity:.5}
-  body{padding-bottom:calc(68px + env(safe-area-inset-bottom,0px))}
-  .glossary-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .term:not(:nth-child(4n+1)){padding-left:0;border-left:0}
-  .term:nth-child(even){padding-left:16px;border-left:1px solid var(--line)}
-  .term{padding-right:16px}
-  .lb-nav{top:auto;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:none}
-}
-@media (max-width:359px){
-  .glossary-grid{grid-template-columns:1fr}
-  .term:nth-child(even){padding-left:0;border-left:0}
-  .term{padding-right:0}
-}
-
-/* Reveal (starts visible; only off-screen items are deferred by JS) */
-.reveal{transition:opacity .9s var(--ease),transform .9s var(--ease)}
-.reveal.pending-reveal{opacity:0;transform:translateY(22px)}
-@media (prefers-reduced-motion:reduce){
-  html{scroll-behavior:auto}
-  .marquee-track{animation:none!important;flex-wrap:wrap;width:auto}
-  .marquee-group[aria-hidden="true"]{display:none}
-  *,*::before,*::after{animation:none!important;transition:none!important}
-  .reveal.pending-reveal{opacity:1;transform:none}
-}
-
-/* ---------- Responsive ---------- */
-@media (max-width:1024px){
-  .dish-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .exp-item{grid-column:span 6}
-  .exp-item:nth-child(even){margin-top:0}
-  .footer-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
-  .footer-brand{grid-column:1/-1}
-}
-@media (max-width:860px){
-  .hero-grid{grid-template-columns:1fr}
-  .hero-art{max-width:440px;margin-inline:auto 4%;width:88%}
-  .hero-art .inset{left:-8%}
-  .section-head,.story-grid,.contact-grid{grid-template-columns:1fr}
-  .story-art{max-width:520px;margin-bottom:40px}
-  .story-art .small{right:-4%}
-  .gallery-grid{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:clamp(140px,42vw,240px)}
-  .g1,.g5,.g7{grid-column:span 2;grid-row:span 1}
-  .g2,.g3,.g4,.g6,.g8{grid-column:span 1;grid-row:span 1}
-}
-@media (max-width:600px){
-  .dish-grid{grid-template-columns:1fr}
-  .exp-grid{grid-template-columns:1fr}
-  .exp-item{grid-column:auto}
-  .exp-item .photo{aspect-ratio:4/3}
-  .hero-ctas .btn{flex:1 1 auto;justify-content:center}
-  .facts li{grid-template-columns:1fr;gap:4px}
-  .footer-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .map{min-height:340px}
-  .map-card{margin:12px}
-}
-</style>
+<link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -419,20 +31,20 @@ section{position:relative}
 
 <header class="site-header">
   <nav class="wrap nav" aria-label="Main">
-    <a class="brand" href="#home" aria-label="Ente Keralam, home">
+    <a class="brand" href="index.html" aria-label="Ente Keralam, home">
       <span class="brand-en">Ente Keralam</span>
       <span class="brand-ml" lang="ml">എന്റെ കേരളം</span>
     </a>
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-panel" aria-label="Open menu"><span></span></button>
     <div class="nav-panel" id="nav-panel">
       <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#story">Our Story</a></li>
-        <li><a href="#menu">Menu</a></li>
-        <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="story.html">Our Story</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
-      <a class="btn btn-brass nav-cta js-reserve" href="#contact">Reserve a Table</a>
+      <a class="btn btn-brass nav-cta js-reserve" href="contact.html">Reserve a Table</a>
     </div>
   </nav>
 </header>
@@ -447,9 +59,9 @@ section{position:relative}
       <h1 id="hero-title">Kerala's flavours. <em>Now in Mapusa.</em></h1>
       <p class="hero-lede">Bold flavours, authentic recipes and the warmth of Kerala, coming soon to Goa.</p>
       <div class="hero-ctas">
-        <a class="btn btn-brass" href="#menu">Discover Our Menu
+        <a class="btn btn-brass" href="menu.html">Discover Our Menu
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        <a class="btn btn-ghost" href="#contact">Find Us</a>
+        <a class="btn btn-ghost" href="contact.html">Find Us</a>
       </div>
       <div class="hero-note">
         <div><strong>Kerala cuisine</strong>Banana leaf, coconut, spice</div>
@@ -480,77 +92,34 @@ section{position:relative}
   </div>
 </div>
 
-<!-- ================= STORY ================= -->
-<section class="section" id="story" aria-labelledby="story-title">
-  <div class="wrap story-grid">
-    <div class="story-art reveal">
-      <figure class="photo tall t-teak" data-photo="story" style="margin:0"></figure>
-      <figure class="photo small t-brass" data-photo="storyInset" style="margin:0"></figure>
+<!-- ================= INTRO ================= -->
+<section class="section" aria-labelledby="intro-title">
+  <div class="wrap intro-grid">
+    <div class="intro-name reveal">
+      <span class="ml" lang="ml">എന്റെ കേരളം</span>
+      <span class="gloss">Ente Keralam · “my Kerala”</span>
     </div>
-    <div class="story-copy reveal">
+    <div class="intro-copy reveal">
       <span class="eyebrow">Our Story</span>
-      <h2 id="story-title">A Kerala table, set in Goa.</h2>
-      <div class="meaning">
-        <span class="ml" lang="ml">എന്റെ കേരളം</span>
-        <span class="pron">Ente Keralam</span>
-        <span class="gloss">Malayalam for “my Kerala”</span>
-      </div>
-      <p class="lead">The name says what we want to bring to Mapusa: Kerala as it tastes at home.</p>
-      <p class="body" style="margin-top:20px">Kerala cooking is built on a few things done with care. Coconut in every form, from fresh-grated to slow-cooked milk to oil. Curry leaves and mustard seeds crackling in a hot pan. Rice served on a banana leaf. Fish from the coast, spiced and wrapped and cooked until it gives. Our kitchen will cook in that tradition, with bold flavours and authentic recipes.</p>
-      <p class="body">Goa and Kerala both live by the coast, the coconut palm and the spice route. We think the food will feel familiar here, and new at the same time.</p>
-      <p class="pending">The full story of Ente Keralam, and the people behind the kitchen, will be shared here ahead of opening.</p>
+      <h2 id="intro-title">A Kerala table, set in Goa.</h2>
+      <p>Coconut in every form, curry leaves crackling in hot oil, rice on a banana leaf and fish from the coast. Ente Keralam will bring Kerala as it tastes at home to Mapusa.</p>
+      <a class="text-link" href="story.html">Read our story <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
     </div>
   </div>
 </section>
 
-<!-- ================= MENU ================= -->
-<section class="section menu" id="menu" aria-labelledby="menu-title">
+<!-- ================= MENU PREVIEW ================= -->
+<section class="section menu" aria-labelledby="preview-title">
   <div class="wrap">
-    <div class="section-head reveal">
+    <div class="preview-head reveal">
       <div>
-        <span class="eyebrow">The Menu</span>
-        <h2 id="menu-title">From the banana leaf.</h2>
-        <span class="notice">Sample menu · Final dishes and prices to be announced</span>
+        <span class="eyebrow">From the menu</span>
+        <h2 id="preview-title">A taste of the banana leaf.</h2>
+        <span class="notice">Sample dishes · Final menu to be announced</span>
       </div>
-      <p>A preview of the kind of Kerala cooking we love. Every dish below is a placeholder until our opening menu is confirmed.</p>
+      <a class="text-link" href="menu.html">See the full menu <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
     </div>
-
-    <div class="menu-bar">
-      <div class="tabs" role="tablist" aria-label="Menu categories" id="menu-tabs"></div>
-      <label class="veg-toggle" for="veg-only"><input type="checkbox" id="veg-only"><span class="sw" aria-hidden="true"></span><span class="veg-mark" aria-hidden="true"></span>Vegetarian only</label>
-    </div>
-    <div id="menu-panel" role="tabpanel" tabindex="0">
-      <p class="tab-intro" id="menu-intro"></p>
-      <div class="dish-grid" id="menu-grid"></div>
-    </div>
-
-    <div class="menu-foot">
-      <span><span class="veg-mark" aria-hidden="true" style="vertical-align:-2px;margin-right:6px"></span>Vegetarian · <span class="veg-mark nv" aria-hidden="true" style="vertical-align:-2px;margin:0 6px"></span>Non-vegetarian. Prices show as ₹ — until the menu is final.</span>
-      <a class="btn btn-ink js-reserve" href="#contact">Ask about the menu</a>
-    </div>
-  </div>
-</section>
-
-<!-- ================= GLOSSARY ================= -->
-<section class="section" id="glossary" aria-labelledby="glossary-title">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <div>
-        <span class="eyebrow">New to Kerala food?</span>
-        <h2 id="glossary-title">A few words before you order.</h2>
-      </div>
-      <p>Kerala cooking has its own names for dishes and ingredients. Here are the ones you'll see most often on a Kerala menu.</p>
-    </div>
-    <dl class="glossary-grid reveal">
-        <div class="term"><span class="ml" lang="ml">സദ്യ</span><dt>Sadya</dt><span class="say">SUD-yah</span><dd>A vegetarian feast served on a banana leaf, with rice and many small dishes laid out in a set order. The centre of Onam and Kerala celebrations.</dd></div>
-        <div class="term"><span class="ml" lang="ml">അപ്പം</span><dt>Appam</dt><span class="say">AHP-pum</span><dd>A bowl-shaped pancake of fermented rice batter, soft and spongy in the middle with lacy, crisp edges. Classic with stew.</dd></div>
-        <div class="term"><span class="ml" lang="ml">പുട്ട്</span><dt>Puttu</dt><span class="say">POOT-too</span><dd>Ground rice layered with grated coconut and steamed in a cylinder. Usually eaten with kadala, a black chickpea curry.</dd></div>
-        <div class="term"><span class="ml" lang="ml">പൊള്ളിച്ചത്</span><dt>Pollichathu</dt><span class="say">POL-lee-cha-thu</span><dd>A cooking method: fish coated in spiced masala, wrapped in banana leaf and roasted on a pan. Karimeen (pearl spot) is the famous version.</dd></div>
-        <div class="term"><span class="ml" lang="ml">കുടംപുളി</span><dt>Kudampuli</dt><span class="say">koo-DUM-poo-lee</span><dd>Malabar tamarind. A smoked, dried fruit that gives Kerala fish curry its deep, sour flavour.</dd></div>
-        <div class="term"><span class="ml" lang="ml">തോരൻ</span><dt>Thoran</dt><span class="say">THOH-run</span><dd>Finely chopped vegetables stir-fried with grated coconut, mustard seeds and curry leaves. Dry, light and everyday.</dd></div>
-        <div class="term"><span class="ml" lang="ml">പായസം</span><dt>Payasam</dt><span class="say">PAH-yuh-sum</span><dd>A slow-cooked sweet pudding, often made with jaggery and coconut milk or with milk and rice. The last course of a sadya.</dd></div>
-        <div class="term"><span class="ml" lang="ml">നിലവിളക്ക്</span><dt>Nilavilakku</dt><span class="say">NEE-luh-vi-luck</span><dd>The traditional brass oil lamp of Kerala, lit for auspicious beginnings and found in homes and temples.</dd></div>
-    </dl>
+    <div class="dish-grid" id="menu-preview"></div>
   </div>
 </section>
 
@@ -590,51 +159,20 @@ section{position:relative}
   </div>
 </section>
 
-<!-- ================= GALLERY ================= -->
-<section class="section" id="gallery" aria-labelledby="gallery-title">
+<!-- ================= VISIT ================= -->
+<section class="visit" aria-labelledby="visit-title">
   <div class="wrap">
-    <div class="section-head reveal">
-      <div>
-        <span class="eyebrow">Gallery</span>
-        <h2 id="gallery-title">A taste of what's coming.</h2>
-      </div>
-      <p>The dishes, lamps and woodwork that inspire Ente Keralam. Photographs of our own kitchen and dining room will join them as the restaurant comes together.</p>
-    </div>
-    <div class="gallery-grid" id="gallery-grid"></div>
-  </div>
-</section>
-
-<!-- ================= CONTACT ================= -->
-<section class="section menu" id="contact" aria-labelledby="contact-title">
-  <div class="wrap contact-grid">
-    <div class="contact-copy reveal">
+    <div>
       <span class="eyebrow">Find Us</span>
-      <h2 id="contact-title">See you in Mapusa.</h2>
-      <p>We're getting the kitchen ready. Address, hours and reservations will be confirmed here before we open.</p>
-      <ul class="facts">
-        <li><span class="k">Location</span><span class="v">Mapusa, Goa</span></li>
-        <li><span class="k">Address</span><span class="v" data-site="address"></span></li>
-        <li><span class="k">Phone</span><span class="v" data-site="phone"></span></li>
-        <li><span class="k">WhatsApp</span><span class="v" data-site="whatsappDisplay"></span></li>
-        <li><span class="k">Hours</span><span class="v" data-site="hours"></span></li>
-      </ul>
-      <div class="contact-actions">
-        <a class="btn btn-brass" id="wa-btn" href="#contact">
-          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.4.8 3.2.6a2.8 2.8 0 0 0 1.8-1.3 2.3 2.3 0 0 0 .2-1.3c-.1-.1-.3-.2-.6-.3Z"/></svg>
-          <span id="wa-label">WhatsApp</span></a>
-        <a class="btn btn-ink" id="maps-btn" href="#" target="_blank" rel="noopener">Open in Google Maps</a>
-      </div>
+      <h2 id="visit-title">Coming soon to Mapusa, Goa.</h2>
     </div>
-
-    <div class="map reveal" aria-label="Map placeholder for Mapusa, Goa">
-      <canvas id="map-canvas" aria-hidden="true"></canvas>
-      <div class="pin" aria-hidden="true"><span>Mapusa</span><i></i></div>
-      <div class="map-card">
-        <div>
-          <h3>Mapusa, Goa</h3>
-          <p>Map pin will be added once the address is confirmed.</p>
-        </div>
-      </div>
+    <dl>
+      <div><dt>Address</dt><dd data-site="address"></dd></div>
+      <div><dt>Hours</dt><dd data-site="hours"></dd></div>
+    </dl>
+    <div class="visit-ctas">
+      <a class="btn btn-brass" href="contact.html">Contact &amp; directions</a>
+      <a class="btn btn-ghost js-maps" href="contact.html" target="_blank" rel="noopener">Open in Google Maps</a>
     </div>
   </div>
 </section>
@@ -642,9 +180,9 @@ section{position:relative}
 </main>
 
 <nav class="action-bar" aria-label="Quick actions">
-  <a href="#menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 4h14v16H5zM9 8h6M9 12h6M9 16h4"/></svg>Menu</a>
-  <a id="ab-maps" href="#contact" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M12 21s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>Directions</a>
-  <a id="ab-reserve" class="primary" href="#contact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M7 3v3M17 3v3M4 8h16M5 5h14v15H5z"/></svg>Reserve</a>
+  <a href="menu.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 4h14v16H5zM9 8h6M9 12h6M9 16h4"/></svg>Menu</a>
+  <a id="ab-maps" href="contact.html" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M12 21s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>Directions</a>
+  <a id="ab-reserve" class="primary" href="contact.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M7 3v3M17 3v3M4 8h16M5 5h14v15H5z"/></svg>Reserve</a>
 </nav>
 
 <!-- ================= FOOTER ================= -->
@@ -658,11 +196,11 @@ section{position:relative}
     <div>
       <h4>Explore</h4>
       <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#story">Our Story</a></li>
-        <li><a href="#menu">Menu</a></li>
-        <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="story.html">Our Story</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </div>
     <div>
@@ -691,285 +229,7 @@ section{position:relative}
   </div>
 </footer>
 
-<script>
-/* =====================================================================
-   CONTENT CONFIG — edit these to update the site. Nothing else needs
-   to change. Empty strings show as "To be announced".
-   ===================================================================== */
-const SITE = {
-  address: "",                       // e.g. "Shop 4, Main Road, Mapusa, Goa 403507"
-  phone: "",                         // e.g. "+91 98xxxxxxxx"
-  whatsapp: "",                      // digits only with country code, e.g. "9198xxxxxxxx"
-  hours: "",                         // e.g. "Tue–Sun · 12–3:30 pm, 7–11 pm"
-  mapsUrl: "https://www.google.com/maps/search/?api=1&query=Mapusa%2C+Goa", // replace with exact place link
-  social: [                          // add url when ready, e.g. "https://instagram.com/entekeralam"
-    { name: "Instagram", url: "" },
-    { name: "Facebook",  url: "" },
-    { name: "Google",    url: "" }
-  ],
-  whatsappMessage: "Hi Ente Keralam! I'd like to reserve a table.",
-  draft: true                        // shows the "Draft preview" strip; set false for launch
-};
-
-/* Photos: current images are Creative Commons photos from Wikimedia Commons (credited in the footer).
-   Swap `src` for the restaurant's own photographs; an empty src shows a designed placeholder. */
-const PHOTOS = {
-  hero:       { src:"images/hero.jpg", eager:true, alt:"Kerala sadya served on a banana leaf", brief:"Sadya on banana leaf, overhead, soft daylight" },
-  heroInset:  { src:"images/hero-inset.jpg", eager:true, alt:"Appam with stew", brief:"Appam with stew, close" },
-  story:      { src:"images/story.jpg", alt:"Wooden pillars around the courtyard of a traditional Kerala nalukettu", brief:"Kerala wood craft — carved teak, warm light" },
-  storyInset: { src:"images/story-inset.jpg", alt:"Fresh coconut being grated by hand", brief:"Fresh coconut being grated" },
-  expLeaf:    { src:"images/exp-leaf.jpg", alt:"A sadya laid out on a banana leaf", brief:"Banana leaf being laid, rice first" },
-  expCoconut: { src:"images/exp-coconut.jpg", alt:"Freshly grated coconut on a plate", brief:"Coconut, curry leaves, whole spices" },
-  expCoast:   { src:"images/exp-coast.jpg", alt:"Karimeen pollichathu, fish roasted in banana leaf", brief:"Fish pollichathu, opened leaf" },
-  expLamp:    { src:"images/exp-lamp.jpg", alt:"A lit brass oil lamp", brief:"Brass nilavilakku, lit, low light" }
-};
-
-const GALLERY = [
-  { src:"images/g-sadya.jpg", alt:"A full Kerala sadya on banana leaf", brief:"Full sadya spread, wide", tone:"t-leaf" },
-  { src:"images/g-puttu.jpg", alt:"Puttu with kadala curry and banana", brief:"Puttu & kadala curry", tone:"t-ember" },
-  { src:"images/g-lamps.jpg", alt:"Brass nilavilakku lamps", brief:"Lamp flame detail", tone:"t-brass" },
-  { src:"images/g-curryleaf.jpg", alt:"Fresh curry leaves", brief:"Curry leaves", tone:"t-leaf" },
-  { src:"images/g-palace.jpg", alt:"Carved wooden ceiling, Padmanabhapuram Palace", brief:"Dining room, evening", tone:"t-teak" },
-  { src:"images/g-meencurry.jpg", alt:"Kerala fish curry with curry leaves", brief:"Fish curry in clay chatti", tone:"t-curry" },
-  { src:"images/g-rice.jpg", alt:"Rice and curry being mixed by hand on a sadya leaf", brief:"Hands serving rice", tone:"t-rice" },
-  { src:"images/g-payasam.jpg", alt:"Paal payasam", brief:"Payasam in brass uruli", tone:"t-sea" }
-];
-
-/* MENU — every item is a SAMPLE placeholder. Replace with the real menu:
-   set sample:false, fill price (number), and swap the photo path. */
-const MENU = [
-  { id:"breakfast", label:"Breakfast & Tiffin", intro:"Steamed, fermented and lacy — Kerala's morning plates.", items:[
-    { name:"Appam & Stew", photo:"images/m-appam.jpg", desc:"Sample: lacy fermented rice hoppers with a mild coconut-milk stew.", price:null, veg:true, tone:"t-rice" },
-    { name:"Puttu & Kadala", photo:"images/m-puttu.jpg", desc:"Sample: steamed rice and coconut cylinders with black chickpea curry.", price:null, veg:true, tone:"t-ember" },
-    { name:"Idiyappam & Egg Curry", photo:"images/m-idiyappam.jpg", desc:"Sample: string hoppers with a coconut-based egg curry.", price:null, veg:false, tone:"t-curry" }
-  ]},
-  { id:"sadya", label:"Sadya", intro:"The banana-leaf feast, served in its traditional order.", items:[
-    { name:"Sadya on Banana Leaf", photo:"images/m-sadya.jpg", desc:"Sample: rice with a spread of curries, thoran, pickles, papadam and payasam.", price:null, veg:true, tone:"t-leaf" },
-    { name:"Avial", photo:"images/m-avial.jpg", desc:"Sample: mixed vegetables in a ground coconut and yoghurt base, finished with coconut oil.", price:null, veg:true, tone:"t-rice" },
-    { name:"Olan", photo:"images/m-olan.jpg", desc:"Sample: ash gourd and cowpeas gently cooked in coconut milk.", price:null, veg:true, tone:"t-sea" }
-  ]},
-  { id:"coast", label:"From the Coast", intro:"Kerala's seafood, sour, red and full of curry leaf.", items:[
-    { name:"Karimeen Pollichathu", photo:"images/m-karimeen.jpg", desc:"Sample: pearl spot fish in spiced masala, wrapped and roasted in banana leaf.", price:null, veg:false, tone:"t-leaf" },
-    { name:"Kerala Fish Curry", photo:"images/m-fishcurry.jpg", desc:"Sample: fish simmered with kudampuli and red chilli in a clay pot.", price:null, veg:false, tone:"t-ember" },
-    { name:"Prawn Roast", photo:"images/m-prawn.jpg", desc:"Sample: prawns roasted dry with onion, pepper and curry leaves.", price:null, veg:false, tone:"t-curry" }
-  ]},
-  { id:"curries", label:"Curries & Sides", intro:"The everyday pots of a Kerala kitchen.", items:[
-    { name:"Nadan Chicken Curry", photo:"images/m-chicken.jpg", desc:"Sample: home-style chicken curry with roasted coconut and spices.", price:null, veg:false, tone:"t-teak" },
-    { name:"Thoran", photo:"images/m-thoran.jpg", desc:"Sample: finely chopped seasonal vegetables stir-fried with grated coconut.", price:null, veg:true, tone:"t-leaf" },
-    { name:"Erissery", photo:"images/m-erissery.jpg", desc:"Sample: pumpkin and lentils with toasted coconut.", price:null, veg:true, tone:"t-curry" }
-  ]},
-  { id:"sweets", label:"Sweets", intro:"Jaggery, coconut and cardamom to finish.", items:[
-    { name:"Payasam", photo:"images/m-payasam.jpg", desc:"Sample: slow-cooked pudding with jaggery, coconut milk and cardamom.", price:null, veg:true, tone:"t-brass" },
-    { name:"Unniyappam", photo:"images/m-unniyappam.jpg", desc:"Sample: small fried rice-and-banana dumplings sweetened with jaggery.", price:null, veg:true, tone:"t-ember" },
-    { name:"Ela Ada", photo:"images/m-elaada.jpg", desc:"Sample: rice parcels with sweet coconut filling, steamed in banana leaf.", price:null, veg:true, tone:"t-leaf" }
-  ]}
-];
-
-const CREDITS = [{"t": "Kerala Sadya 02", "a": "Ganesh Mohan T", "l": "CC BY-SA 4.0", "lu": "https://creativecommons.org/licenses/by-sa/4.0/", "u": "https://commons.wikimedia.org/wiki/File:Kerala_Sadya_02.jpg"}, {"t": "Massa Stew with Appam", "a": "Sudiptorana", "l": "CC BY-SA 4.0", "lu": "https://creativecommons.org/licenses/by-sa/4.0/", "u": "https://commons.wikimedia.org/wiki/File:Massa_Stew_with_Appam.jpg"}, {"t": "Chazhur Kovilakam Nalukettu", "a": "HARISREE", "l": "CC BY-SA 3.0", "lu": "https://creativecommons.org/licenses/by-sa/3.0/", "u": "https://commons.wikimedia.org/wiki/File:Chazhur_Kovilakam_Nalukettu.JPG"}, {"t": "Coconut being grated", "a": "Subhashish Panigrahi", "l": "CC BY-SA 3.0", "lu": "https://creativecommons.org/licenses/by-sa/3.0/", "u": "https://commons.wikimedia.org/wiki/File:Coconut_being_grated.jpg"}, {"t": "Traditional Onam Sadya 2024", "a": "Bhuvana Meenakshi", "l": "CC BY 4.0", "lu": "https://creativecommons.org/licenses/by/4.0/", "u": "https://commons.wikimedia.org/wiki/File:Traditional_Onam_Sadya_2024.jpg"}, {"t": "Grated Coconut - Howrah 2013-10-18 3541", "a": "Biswarup Ganguly", "l": "CC BY 3.0", "lu": "https://creativecommons.org/licenses/by/3.0/", "u": "https://commons.wikimedia.org/wiki/File:Grated_Coconut_-_Howrah_2013-10-18_3541.JPG"}, {"t": "Karimeen Ilayill Pollichathu", "a": "Jiss Tom palelil", "l": "CC BY-SA 4.0", "lu": "https://creativecommons.org/licenses/by-sa/4.0/", "u": "https://commons.wikimedia.org/wiki/File:Karimeen_Ilayill_Pollichathu.JPG"}, {"t": "Karthikai Deepam", "a": "Aravind Sivaraj", "l": "CC BY-SA 3.0", "lu": "https://creativecommons.org/licenses/by-sa/3.0/", "u": "https://commons.wikimedia.org/wiki/File:Karthikai_Deepam.jpg"}, {"t": "Kerala Sadhya (കേരള സദ്യ )", "a": "Manukrishnan80", "l": "CC BY-SA 4.0", "lu": "https://creativecommons.org/licenses/by-sa/4.0/", "u": "https://commons.wikimedia.org/wiki/File:Kerala_Sadhya_(%E0%B4%95%E0%B5%87%E0%B4%B0%E0%B4%B3_%E0%B4%B8%E0%B4%A6%E0%B5%8D%E0%B4%AF_).jpg"}, {"t": "Puttu Kadala Curry and Pazham", "a": "Jyothishbabu", "l": "CC BY-SA 4.0", "lu": "https://creativecommons.org/licenses/by-sa/4.0/", "u": "https://commons.wikimedia.org/wiki/File:Puttu_Kadala_Curry_and_Pazham.jpg"}, {"t": "Nilavilakku", "a": "Vis M", "l": "CC BY-SA 4.0", "lu": "https://creativecommons.org/licenses/by-sa/4.0/", "u": "https://commons.wikimedia.org/wiki/File:Nilavilakku.jpg"}, {"t": "20260317 Murraya koenigii 02", "a": "Flocci Nivis", "l": "CC BY 4.0", "lu": "https://creativecommons.org/licenses/by/4.0/", "u": "https://commons.wikimedia.org/wiki/File:20260317_Murraya_koenigii_02.jpg"}, {"t": "Padmanabhapuram Palace-2", "a": "Jagadhatri", "l": "CC BY-SA 3.0", "lu": "https://creativecommons.org/licenses/by-sa/3.0/", "u": "https://commons.wikimedia.org/wiki/File:Padmanabhapuram_Palace-2.JPG"}, {"t": "Meen curry 2", "a": "Kalakki at Malayalam Wikipedia", "l": "CC BY-SA 2.5", "lu": "https://creativecommons.org/licenses/by-sa/2.5/", "u": "https://commons.wikimedia.org/wiki/File:Meen_curry_2.JPG"}, {"t": "Onam sadya", "a": "Abraham Jacob John", "l": "CC BY-SA 4.0", "lu": "https://creativecommons.org/licenses/by-sa/4.0/", "u": "https://commons.wikimedia.org/wiki/File:Onam_sadya.jpg"}, {"t": "Paal payasam", "a": "Ross thres", "l": "CC BY-SA 4.0", "lu": "https://creativecommons.org/licenses/by-sa/4.0/", "u": "https://commons.wikimedia.org/wiki/File:Paal_payasam.JPG"}, {"t": "Appam and stew", "a": "Nithajay", "l": "CC BY-SA 4.0", "lu": "https://creativecommons.org/licenses/by-sa/4.0/", "u": "https://commons.wikimedia.org/wiki/File:Appam_and_stew.jpg"}, {"t": "GKN Puttu Kadala DSC 0555", "a": "Pranchiyettan", "l": "CC BY-SA 2.5 in", "lu": "https://creativecommons.org/licenses/by-sa/2.5/in/", "u": "https://commons.wikimedia.org/wiki/File:GKN_Puttu_Kadala_DSC_0555.JPG"}, {"t": "Idiyappam with Egg Masala Curry", "a": "Viewfinder18", "l": "CC BY-SA 4.0", "lu": "https://creativecommons.org/licenses/by-sa/4.0/", "u": "https://commons.wikimedia.org/wiki/File:Idiyappam_with_Egg_Masala_Curry.jpg"}, {"t": "Onam Sadhya served on banana leaf at Wiki Conference India 2026 in Crown Plaza Hotel in Kochi 02", "a": "Dev Jadiya", "l": "CC BY-SA 4.0", "lu": "https://creativecommons.org/licenses/by-sa/4.0/", "u": "https://commons.wikimedia.org/wiki/File:Onam_Sadhya_served_on_banana_leaf_at_Wiki_Conference_India_2026_in_Crown_Plaza_Hotel_in_Kochi_02.jpg"}, {"t": "Aviyal,Kerala cuisine", "a": "Samphotography", "l": "CC BY-SA 4.0", "lu": "https://creativecommons.org/licenses/by-sa/4.0/", "u": "https://commons.wikimedia.org/wiki/File:Aviyal,Kerala_cuisine.jpg"}, {"t": "Olan", "a": "Kavya Manohar", "l": "CC BY-SA 3.0", "lu": "https://creativecommons.org/licenses/by-sa/3.0/", "u": "https://commons.wikimedia.org/wiki/File:Olan.jpg"}, {"t": "Karimeen Pollichathu", "a": "Anupama1002", "l": "CC BY-SA 4.0", "lu": "https://creativecommons.org/licenses/by-sa/4.0/", "u": "https://commons.wikimedia.org/wiki/File:Karimeen_Pollichathu.jpg"}, {"t": "Kerala spicy Fish Curry", "a": "Ramesh NG", "l": "CC BY-SA 2.0", "lu": "https://creativecommons.org/licenses/by-sa/2.0/", "u": "https://commons.wikimedia.org/wiki/File:Kerala_spicy_Fish_Curry.jpg"}, {"t": "Kerala Style Prawns Roast", "a": "Dhanyagopalakrishnan", "l": "CC BY-SA 4.0", "lu": "https://creativecommons.org/licenses/by-sa/4.0/", "u": "https://commons.wikimedia.org/wiki/File:Kerala_Style_Prawns_Roast.jpg"}, {"t": "Kerala Chicken Curry 2024", "a": "Nikolasivy13", "l": "CC0", "lu": "https://creativecommons.org/publicdomain/zero/1.0/", "u": "https://commons.wikimedia.org/wiki/File:Kerala_Chicken_Curry_2024.jpg"}, {"t": "Thoran curry, Kerala style (20945090716)", "a": "Ramesh NG from Bangalore, INDIA", "l": "CC BY-SA 2.0", "lu": "https://creativecommons.org/licenses/by-sa/2.0/", "u": "https://commons.wikimedia.org/wiki/File:Thoran_curry,_Kerala_style_(20945090716).jpg"}, {"t": "Erisseri", "a": "Kavya Manohar", "l": "CC BY-SA 3.0", "lu": "https://creativecommons.org/licenses/by-sa/3.0/", "u": "https://commons.wikimedia.org/wiki/File:Erisseri.jpg"}, {"t": "Semiya payasam, Alappuzha", "a": "Vis M", "l": "CC BY-SA 4.0", "lu": "https://creativecommons.org/licenses/by-sa/4.0/", "u": "https://commons.wikimedia.org/wiki/File:Semiya_payasam,_Alappuzha.jpg"}, {"t": "Unniyappam - Karayappam - Kuzhiyappam", "a": "Mullookkaaran", "l": "CC BY-SA 3.0", "lu": "https://creativecommons.org/licenses/by-sa/3.0/", "u": "https://commons.wikimedia.org/wiki/File:Unniyappam_-_Karayappam_-_Kuzhiyappam.jpg"}, {"t": "Kerala Ela Ada", "a": "Samphotography", "l": "CC BY-SA 4.0", "lu": "https://creativecommons.org/licenses/by-sa/4.0/", "u": "https://commons.wikimedia.org/wiki/File:Kerala_Ela_Ada.jpg"}];
-
-/* ===================================================================== */
-const $ = (s, r=document) => r.querySelector(s);
-const $$ = (s, r=document) => [...r.querySelectorAll(s)];
-const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
-const TBA = '<span class="tba">To be announced</span>';
-
-function fillPhoto(el, p){
-  if (!el || !p) return;
-  if (p.src){
-    el.classList.remove("is-plate");
-    el.removeAttribute("role"); el.removeAttribute("aria-label");
-    el.innerHTML = `<img src="${esc(p.src)}" alt="${esc(p.alt)}" ${p.eager ? 'fetchpriority="high"' : 'loading="lazy"'} decoding="async">`;
-  } else {
-    el.classList.add("is-plate");
-    el.setAttribute("role","img");
-    el.setAttribute("aria-label", `Photo placeholder: ${p.alt}`);
-    el.innerHTML = `<span class="plate-label"><b>Photograph</b><span>${esc(p.brief)}</span></span>`;
-  }
-}
-$$("[data-photo]").forEach(el => fillPhoto(el, PHOTOS[el.dataset.photo]));
-
-/* Site facts */
-const waLink = SITE.whatsapp ? `https://wa.me/${SITE.whatsapp.replace(/\D/g,"")}?text=${encodeURIComponent(SITE.whatsappMessage)}` : "";
-const facts = {
-  address: SITE.address ? esc(SITE.address) : TBA,
-  phone: SITE.phone ? esc(SITE.phone) : TBA,
-  whatsappDisplay: SITE.whatsapp ? esc("+" + SITE.whatsapp.replace(/\D/g,"")) : TBA,
-  hours: SITE.hours ? esc(SITE.hours) : TBA,
-  hoursShort: SITE.hours ? esc(SITE.hours) : 'Hours <span class="soon">to be announced</span>',
-  phoneShort: SITE.phone ? esc(SITE.phone) : 'Phone <span class="soon">to be announced</span>'
-};
-$$("[data-site]").forEach(el => el.innerHTML = facts[el.dataset.site] ?? "");
-
-const waBtn = $("#wa-btn");
-if (waLink){
-  waBtn.href = waLink; waBtn.target = "_blank"; waBtn.rel = "noopener";
-  $("#wa-label").textContent = "Reserve on WhatsApp";
-  $$(".js-reserve").forEach(a => { a.href = waLink; a.target = "_blank"; a.rel = "noopener"; });
-} else {
-  /* No number yet: render as an honest, non-clickable status */
-  const span = document.createElement("span");
-  span.className = waBtn.className; span.style.opacity = ".55"; span.style.cursor = "default";
-  span.setAttribute("aria-disabled","true");
-  span.innerHTML = waBtn.innerHTML;
-  span.querySelector("#wa-label").textContent = "WhatsApp opens at launch";
-  waBtn.replaceWith(span);
-}
-$("#maps-btn").href = SITE.mapsUrl;
-
-$("#social-list").innerHTML = SITE.social.map(s => s.url
-  ? `<li><a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.name)}</a></li>`
-  : `<li>${esc(s.name)}<span class="soon">soon</span></li>`).join("");
-$("#credits-list").innerHTML = CREDITS.map(c => `<li><a href="${esc(c.u)}" target="_blank" rel="noopener">${esc(c.t)}</a> · ${esc(c.a)} · ${c.lu ? `<a href="${esc(c.lu)}" target="_blank" rel="noopener">${esc(c.l)}</a>` : esc(c.l)}</li>`).join("");
-$("#year").textContent = new Date().getFullYear();
-
-/* Menu */
-const tabsEl = $("#menu-tabs"), gridEl = $("#menu-grid"), introEl = $("#menu-intro");
-tabsEl.innerHTML = MENU.map((c,i) => `<button class="tab" role="tab" id="tab-${c.id}" aria-controls="menu-panel" aria-selected="${i===0}" tabindex="${i===0?0:-1}" data-id="${c.id}">${esc(c.label)}</button>`).join("");
-let currentCat = MENU[0].id;
-function showCategory(id){
-  const cat = MENU.find(c => c.id === id) || MENU[0];
-  $$(".tab", tabsEl).forEach(t => { const on = t.dataset.id === cat.id; t.setAttribute("aria-selected", on); t.tabIndex = on ? 0 : -1; });
-  $("#menu-panel").setAttribute("aria-labelledby", `tab-${cat.id}`);
-  introEl.textContent = cat.intro;
-  currentCat = cat.id;
-  const vegOnly = $("#veg-only").checked;
-  const items = cat.items.filter(d => !vegOnly || d.veg);
-  if (!items.length){ gridEl.innerHTML = `<p class="menu-empty">No vegetarian dishes in ${esc(cat.label)} on the sample menu. Try another section.</p>`; return; }
-  gridEl.innerHTML = items.map(d => `
-    <article class="dish">
-      <figure class="photo ${d.tone || "t-leaf"}" data-dish style="margin:0"></figure>
-      <div class="dish-body">
-        <div class="dish-top"><h3><span class="veg-mark${d.veg ? "" : " nv"}" role="img" aria-label="${d.veg ? "Vegetarian" : "Non-vegetarian"}" style="display:inline-grid;vertical-align:3px;margin-right:10px"></span>${esc(d.name)}</h3><span class="price">${d.price != null ? "₹" + d.price : "₹ —"}</span></div>
-        <p>${esc(d.desc)}</p>
-        <div class="tags">${d.sample !== false ? '<span class="tag sample">Sample</span>' : ""}<span class="tag ${d.veg ? "veg" : ""}">${d.veg ? "Vegetarian" : "Non-veg"}</span></div>
-      </div>
-    </article>`).join("");
-  $$("[data-dish]", gridEl).forEach((el,i) => { const d = items[i]; fillPhoto(el, { src:d.photo||"", alt:d.name, brief:d.name }); });
-}
-tabsEl.addEventListener("click", e => { const t = e.target.closest(".tab"); if (t) showCategory(t.dataset.id); });
-tabsEl.addEventListener("keydown", e => {
-  if (!["ArrowRight","ArrowLeft","Home","End"].includes(e.key)) return;
-  const tabs = $$(".tab", tabsEl); let i = tabs.indexOf(document.activeElement);
-  i = e.key==="Home" ? 0 : e.key==="End" ? tabs.length-1 : (i + (e.key==="ArrowRight"?1:-1) + tabs.length) % tabs.length;
-  tabs[i].focus(); showCategory(tabs[i].dataset.id); e.preventDefault();
-});
-showCategory(MENU[0].id);
-$("#veg-only").addEventListener("change", () => showCategory(currentCat));
-
-/* Gallery */
-$("#gallery-grid").innerHTML = GALLERY.map((g,i) => `
-  <div class="g g${i+1}${g.src?" has-img":""}">
-    ${g.src ? `<button type="button" aria-label="View larger: ${esc(g.alt)}" data-i="${i}"><figure class="photo" data-g="${i}" style="margin:0"></figure><figcaption aria-hidden="true">${esc(g.alt)}</figcaption></button>`
-            : `<figure class="photo ${g.tone}" data-g="${i}" style="margin:0"></figure>`}
-  </div>`).join("");
-$$("[data-g]").forEach(el => fillPhoto(el, GALLERY[+el.dataset.g]));
-const galleryImgs = GALLERY.map((g,i)=>({...g,i})).filter(g=>g.src);
-const arrow = d => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="${d}"/></svg>`;
-$("#gallery-grid").addEventListener("click", e => {
-  const b = e.target.closest("button[data-i]"); if (!b) return;
-  let pos = galleryImgs.findIndex(g => g.i === +b.dataset.i);
-  const lb = document.createElement("div");
-  lb.className = "lightbox"; lb.setAttribute("role","dialog"); lb.setAttribute("aria-modal","true");
-  lb.innerHTML = `<figure><img alt=""><figcaption></figcaption></figure>
-    <button class="lb-nav lb-prev" type="button" aria-label="Previous photo">${arrow("M15 5l-7 7 7 7")}</button>
-    <button class="lb-nav lb-next" type="button" aria-label="Next photo">${arrow("M9 5l7 7-7 7")}</button>
-    <button class="lightbox-close" type="button">Close</button>`;
-  const show = n => { pos = (n + galleryImgs.length) % galleryImgs.length; const g = galleryImgs[pos];
-    const img = $("img", lb); img.src = g.src; img.alt = g.alt; lb.setAttribute("aria-label", g.alt);
-    $("figcaption", lb).innerHTML = `<b>${pos+1} / ${galleryImgs.length}</b>${esc(g.alt)}`; };
-  const close = () => { lb.remove(); document.removeEventListener("keydown", onKey); document.body.style.overflow = ""; b.focus(); };
-  const onKey = ev => { if (ev.key === "Escape") close(); else if (ev.key === "ArrowRight") show(pos+1); else if (ev.key === "ArrowLeft") show(pos-1); };
-  lb.addEventListener("click", ev => {
-    if (ev.target.closest(".lb-prev")) show(pos-1);
-    else if (ev.target.closest(".lb-next")) show(pos+1);
-    else if (ev.target === lb || ev.target.closest(".lightbox-close")) close();
-  });
-  let x0 = null;
-  lb.addEventListener("touchstart", ev => { x0 = ev.touches[0].clientX; }, { passive:true });
-  lb.addEventListener("touchend", ev => { if (x0 == null) return; const dx = ev.changedTouches[0].clientX - x0; if (Math.abs(dx) > 50) show(pos + (dx < 0 ? 1 : -1)); x0 = null; });
-  document.addEventListener("keydown", onKey);
-  show(pos); document.body.style.overflow = "hidden";
-  document.body.appendChild(lb); $(".lightbox-close", lb).focus();
-});
-
-/* Draft strip */
-if (SITE.draft){
-  let hidden = false; try { hidden = sessionStorage.getItem("ek-draft-hidden") === "1"; } catch(e){}
-  $("#draft-bar").hidden = hidden;
-  $("#draft-close").addEventListener("click", () => { $("#draft-bar").hidden = true; try { sessionStorage.setItem("ek-draft-hidden","1"); } catch(e){} });
-}
-
-/* Mobile action bar */
-$("#ab-maps").href = SITE.mapsUrl;
-if (waLink){ const r = $("#ab-reserve"); r.href = waLink; r.target = "_blank"; r.rel = "noopener"; r.lastChild.textContent = "WhatsApp"; }
-
-/* Mobile nav */
-const toggle = $(".menu-toggle"), panel = $("#nav-panel");
-function setNav(open){ panel.classList.toggle("open", open); toggle.setAttribute("aria-expanded", open); toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu"); }
-toggle.addEventListener("click", () => setNav(!panel.classList.contains("open")));
-panel.addEventListener("click", e => { if (e.target.closest("a")) setNav(false); });
-document.addEventListener("keydown", e => { if (e.key === "Escape") setNav(false); });
-matchMedia("(min-width:901px)").addEventListener("change", () => setNav(false));
-
-/* Active nav link */
-const navLinks = $$(".nav-links a");
-const sections = ["home","story","menu","gallery","contact"].map(id => document.getElementById(id));
-if ("IntersectionObserver" in window){
-  const io = new IntersectionObserver(entries => {
-    entries.forEach(en => { if (en.isIntersecting){
-      navLinks.forEach(a => a.setAttribute("aria-current", a.getAttribute("href") === "#" + en.target.id ? "true" : "false"));
-    }});
-  }, { rootMargin:"-45% 0px -50% 0px" });
-  sections.forEach(s => s && io.observe(s));
-
-  /* Reveal: only defer items currently below the fold */
-  if (!matchMedia("(prefers-reduced-motion: reduce)").matches){
-    const rv = new IntersectionObserver(entries => entries.forEach(en => {
-      if (en.isIntersecting){ en.target.classList.remove("pending-reveal"); rv.unobserve(en.target); }
-    }), { rootMargin:"0px 0px -8% 0px" });
-    $$(".reveal").forEach(el => {
-      if (el.getBoundingClientRect().top > innerHeight){ el.classList.add("pending-reveal"); rv.observe(el); }
-    });
-    setTimeout(() => $$(".pending-reveal").forEach(el => el.classList.remove("pending-reveal")), 6000);
-  }
-}
-
-/* Map placeholder: a quiet topographic sketch of the Goa coast (decorative) */
-(function drawMap(){
-  const c = $("#map-canvas"); if (!c) return;
-  const draw = () => {
-    const r = c.getBoundingClientRect(), dpr = Math.min(devicePixelRatio || 1, 2);
-    c.width = r.width * dpr; c.height = r.height * dpr;
-    const x = c.getContext("2d"); x.scale(dpr, dpr);
-    const w = r.width, h = r.height;
-    x.clearRect(0,0,w,h);
-    // sea on the left
-    const g = x.createLinearGradient(0,0,w*.4,0);
-    g.addColorStop(0,"rgba(36,71,74,.75)"); g.addColorStop(1,"rgba(36,71,74,0)");
-    x.fillStyle = g; x.fillRect(0,0,w*.45,h);
-    // contour lines
-    let seed = 7; const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
-    for (let k = 0; k < 16; k++){
-      x.beginPath();
-      const base = h * (k / 15);
-      for (let i = 0; i <= 40; i++){
-        const px = (w / 40) * i;
-        const py = base + Math.sin(i * .35 + k) * 14 + Math.sin(i * .11 + k * 2) * 22;
-        i ? x.lineTo(px, py) : x.moveTo(px, py);
-      }
-      x.strokeStyle = `rgba(215,185,127,${.06 + rnd()*.07})`; x.lineWidth = 1; x.stroke();
-    }
-    // river (Mapusa river) as a soft curve
-    x.beginPath(); x.moveTo(w, h*.62);
-    x.bezierCurveTo(w*.75, h*.55, w*.6, h*.75, w*.38, h*.66);
-    x.bezierCurveTo(w*.22, h*.6, w*.12, h*.72, 0, h*.68);
-    x.strokeStyle = "rgba(95,140,85,.55)"; x.lineWidth = 3; x.stroke();
-    // grid of lanes
-    x.strokeStyle = "rgba(239,232,216,.07)"; x.lineWidth = 1;
-    for (let i = 1; i < 8; i++){ x.beginPath(); x.moveTo(w*.42 + i*w*.07, 0); x.lineTo(w*.38 + i*w*.075, h); x.stroke(); }
-  };
-  draw(); addEventListener("resize", draw, { passive:true });
-})();
-</script>
+<script src="assets/js/content.js"></script>
+<script src="assets/js/main.js"></script>
 </body>
 </html>
