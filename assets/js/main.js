@@ -59,6 +59,10 @@ $("#year").textContent = new Date().getFullYear();
 const fmtPrice = p => p == null ? "₹ —" : (typeof p === "number" ? "₹" + p : p);
 const vegMark = veg => `<span class="veg-mark${veg ? "" : " nv"}" role="img" aria-label="${veg ? "Vegetarian" : "Non-vegetarian"}"></span>`;
 
+/* Placeholder icons for dishes without a photo */
+const ICON_LEAF = `<svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M6 24C6 13 13 6 26 6c0 13-7 20-18 20"/><path d="M6 26 20 12"/><path d="M12 20l-1-5M15 17l-1-5M18 14l-.5-4M12 20l5 .5M15 17l5 .5"/></svg>`;
+const ICON_GLASS = `<svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6h14l-2 20a2 2 0 0 1-2 2h-6a2 2 0 0 1-2-2z"/><path d="M10.2 13h11.6"/><path d="M19 6l3-3"/><circle cx="14" cy="19" r=".8" fill="currentColor"/><circle cx="17.5" cy="22" r=".8" fill="currentColor"/></svg>`;
+
 /* Menu page */
 if ($("#menu-tabs")) {
 const tabsEl = $("#menu-tabs"), gridEl = $("#menu-grid"), introEl = $("#menu-intro");
@@ -74,8 +78,8 @@ function showCategory(id){
   const items = cat.items.filter(d => !vegOnly || d.veg);
   if (!items.length){ gridEl.innerHTML = `<li class="menu-empty">No vegetarian dishes in ${esc(cat.label)}. Try another section.</li>`; return; }
   gridEl.innerHTML = items.map((d,i) => `
-    <li class="mi${d.photo ? " has-photo" : ""}">
-      ${d.photo ? `<span class="mi-thumb"><img src="${esc(d.photo)}" alt="" loading="lazy" decoding="async"></span>` : ""}
+    <li class="mi">
+      ${d.photo ? `<span class="mi-thumb"><img src="${esc(d.photo)}" alt="" loading="lazy" decoding="async"></span>` : `<span class="mi-thumb is-placeholder" aria-hidden="true">${/drinks|fusion/.test(cat.id) ? ICON_GLASS : ICON_LEAF}</span>`}
       <div class="mi-body">
         <div class="mi-top"><h3>${vegMark(d.veg)}<span>${esc(d.name)}</span></h3><span class="mi-dots" aria-hidden="true"></span><span class="price">${esc(fmtPrice(d.price))}</span></div>
         <p>${esc(d.desc)}</p>

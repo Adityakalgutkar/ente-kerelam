@@ -493,3 +493,8 @@ section{position:relative}
   .dp{scroll-snap-align:start}
   .mi-thumb{width:52px;height:52px}
 }
+
+/* Menu thumbnail placeholder (dishes without a photo) */
+.mi-thumb.is-placeholder{display:grid;place-items:center;background:var(--paper);border:1px solid color-mix(in srgb,var(--brass) 45%,transparent);color:var(--brass)}
+.mi-thumb.is-placeholder svg{width:46%;height:46%}
+.menu .mi-thumb.is-placeholder{background:color-mix(in srgb,var(--paper) 70%,var(--card))}
