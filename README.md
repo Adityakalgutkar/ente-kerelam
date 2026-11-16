@@ -11,7 +11,8 @@ Pre-launch website for **Ente Keralam**, a Kerala cuisine restaurant opening soo
 |---|---|---|
 | `index.html` | Home | Hero, launch line, dish marquee, story intro, menu preview, The Kerala Experience, visit band |
 | `story.html` | Our Story | The name and Kerala cooking, The Kerala Experience |
-| `menu.html` | Menu | Sample menu with categories and veg filter, Kerala food glossary |
+| `menu.html` | Menu | Opening menu (8 sections) with veg filter, glossary of terms on the menu |
+| `drinks.html` | Drinks | The Heritage Drinks Collection: 7 mocktails, 5 cocktails |
 | `gallery.html` | Gallery | Photo grid with captions and a full-screen viewer |
 | `contact.html` | Contact | Location, contact placeholders, WhatsApp, map placeholder |
 
@@ -64,3 +65,20 @@ Current images are Creative Commons photos from Wikimedia Commons (mostly CC BY-
 - Instagram / Facebook / Google Business links and exact Google Maps link
 - Founder or chef story, if they want one
 - Domain and hosting
+
+## Menu and drinks: questions for Matthew (Nov 2026)
+The menu comes from Matthew's 4-page food menu and the drinks from his beverage programme. A few things need confirming:
+
+1. **Puttu with Beef Fry** appears twice in Breakfast (₹160 and ₹200). The site shows it once at ₹200.
+2. **Dosa with Chicken Curry**: the description was cut off. The site says "Crisp fermented rice crepe served with spicy chicken curry".
+3. **Malabar Biriyani** has three meats (chicken / mutton / beef) but two prices (₹290 / ₹380). Which price is which?
+4. **Kozhukkatta** is listed under both Snacks and Sweets at ₹80. Keep it in one section?
+5. **Unniyappam** has a garbled veg/non-veg mark. The site marks it vegetarian. **Unnakkaya** (egg filling) is marked non-veg.
+6. **Kerala Spice Iced Tea** shows ₹160 and ₹60. The site uses ₹160.
+7. Garbled drinks on page 4 were left out: "Kerala Spice" (₹150), a second "Orange Juice" (₹150), "Filter … Shakam", and an unreadable buttermilk item (₹60).
+8. **Overlap between drinks lists:** the menu's Tender Coconut Mojito (₹180) and Pineapple Ginger Fizz (₹170) are close to the Heritage collection's Elaneer Royal (₹260) and Alleppey Pineapple Fizz (₹220). Keep both or merge?
+9. Beverage prices are the "suggested selling prices" from the programme document. Confirm before launch.
+
+**Not published on purpose:** recipes, costs, margins, purchasing budget and sales projections (internal), and the Kerala beer and wine concepts (proposed, not confirmed products).
+
+**Drink photos:** the photos Matthew shared were screenshots of other websites' images, so they are not used. The Drinks page uses Creative Commons photos as stand-ins until the restaurant photographs its own drinks.

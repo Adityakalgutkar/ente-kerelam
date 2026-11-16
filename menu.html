@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Menu · Ente Keralam</title>
-<meta name="description" content="A preview of the Kerala menu at Ente Keralam, Mapusa: appam, puttu, sadya, seafood, curries and sweets.">
+<meta name="description" content="The Ente Keralam menu: Central Travancore Nasrani cuisine in Mapusa, Goa. Appam, puttu, chatti choru, roasts, biriyani, snacks and payasam.">
 <meta property="og:title" content="Menu · Ente Keralam">
-<meta property="og:description" content="A preview of the Kerala menu at Ente Keralam, Mapusa: appam, puttu, sadya, seafood, curries and sweets.">
+<meta property="og:description" content="The Ente Keralam menu: Central Travancore Nasrani cuisine in Mapusa, Goa. Appam, puttu, chatti choru, roasts, biriyani, snacks and payasam.">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#16291f">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2316291f'/%3E%3Cpath d='M32 12c5 7 8 12 8 17a8 8 0 0 1-16 0c0-5 3-10 8-17z' fill='%23d7b97f'/%3E%3Crect x='18' y='44' width='28' height='4' rx='2' fill='%23b38a4c'/%3E%3Crect x='24' y='50' width='16' height='3' rx='1.5' fill='%23b38a4c'/%3E%3C/svg%3E">
@@ -21,7 +21,7 @@
 
 <div class="draft-bar" id="draft-bar" hidden>
   <div class="wrap">
-    <p><b>Draft preview</b>Photos are illustrative and the menu is a sample. Final content to come.</p>
+    <p><b>Draft preview</b>Photos are illustrative. Menu and prices may change before opening.</p>
     <button type="button" id="draft-close">Hide</button>
   </div>
 </div>
@@ -38,6 +38,7 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="story.html">Our Story</a></li>
         <li><a href="menu.html" aria-current="page">Menu</a></li>
+        <li><a href="drinks.html">Drinks</a></li>
         <li><a href="gallery.html">Gallery</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
@@ -52,8 +53,8 @@
   <div class="wrap">
     <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span aria-hidden="true">/</span><span>Menu</span></nav>
     <h1 id="page-title">From the <em>banana leaf.</em></h1>
-    <p class="lede">A preview of the kind of Kerala cooking we love. Every dish here is a placeholder until our opening menu is confirmed.</p>
-    <span class="notice">Sample menu · Final dishes and prices to be announced</span>
+    <p class="lede">Central Travancore Nasrani cuisine: breakfast appams and puttu, banana-leaf meals, roasts, biriyanis, tea-time snacks and payasam.</p>
+    <span class="notice">Opening menu · Prices may change before launch</span>
   </div>
   <div class="ml-mark" aria-hidden="true" lang="ml">ഭക്ഷണം</div>
   <div class="kasavu" aria-hidden="true"></div>
@@ -69,12 +70,12 @@
     </div>
     <div id="menu-panel" role="tabpanel" tabindex="0">
       <p class="tab-intro" id="menu-intro"></p>
-      <div class="dish-grid" id="menu-grid"></div>
+      <ul class="menu-list" id="menu-grid"></ul>
     </div>
 
     <div class="menu-foot">
-      <span><span class="veg-mark" aria-hidden="true" style="vertical-align:-2px;margin-right:6px"></span>Vegetarian · <span class="veg-mark nv" aria-hidden="true" style="vertical-align:-2px;margin:0 6px"></span>Non-vegetarian. Prices show as ₹ — until the menu is final.</span>
-      <a class="btn btn-ink js-reserve" href="#contact">Ask about the menu</a>
+      <span><span class="veg-mark" aria-hidden="true" style="vertical-align:-2px;margin-right:6px"></span>Vegetarian · <span class="veg-mark nv" aria-hidden="true" style="vertical-align:-2px;margin:0 6px"></span>Non-vegetarian. Mocktails and cocktails are on the <a href="drinks.html">Drinks page</a>.</span>
+      <a class="btn btn-ink js-reserve" href="contact.html">Ask about the menu</a>
     </div>
   </div>
 </section>
@@ -87,23 +88,23 @@
         <span class="eyebrow">New to Kerala food?</span>
         <h2 id="glossary-title">A few words before you order.</h2>
       </div>
-      <p>Kerala cooking has its own names for dishes and ingredients. Here are the ones you'll see most often on a Kerala menu.</p>
+      <p>Kerala cooking has its own names for dishes and methods. Here are the ones you'll meet on our menu.</p>
     </div>
     <dl class="glossary-grid reveal">
-        <div class="term"><span class="ml" lang="ml">സദ്യ</span><dt>Sadya</dt><span class="say">SUD-yah</span><dd>A vegetarian feast served on a banana leaf, with rice and many small dishes laid out in a set order. The centre of Onam and Kerala celebrations.</dd></div>
+        <div class="term"><span class="ml" lang="ml">നസ്രാണി</span><dt>Nasrani</dt><span class="say">nus-RAH-nee</span><dd>Kerala's Saint Thomas Christians, also called Syrian Christians. Their Central Travancore kitchens are known for appam and stew, roasts and kappa.</dd></div>
+        <div class="term"><span class="ml" lang="ml">ചട്ടിച്ചോറ്</span><dt>Chatti Choru</dt><span class="say">CHUT-tee CHO-ru</span><dd>Rice and curries layered together and served in a clay pot (chatti), so every spoonful has a bit of everything.</dd></div>
         <div class="term"><span class="ml" lang="ml">അപ്പം</span><dt>Appam</dt><span class="say">AHP-pum</span><dd>A bowl-shaped pancake of fermented rice batter, soft and spongy in the middle with lacy, crisp edges. Classic with stew.</dd></div>
-        <div class="term"><span class="ml" lang="ml">പുട്ട്</span><dt>Puttu</dt><span class="say">POOT-too</span><dd>Ground rice layered with grated coconut and steamed in a cylinder. Usually eaten with kadala, a black chickpea curry.</dd></div>
-        <div class="term"><span class="ml" lang="ml">പൊള്ളിച്ചത്</span><dt>Pollichathu</dt><span class="say">POL-lee-cha-thu</span><dd>A cooking method: fish coated in spiced masala, wrapped in banana leaf and roasted on a pan. Karimeen (pearl spot) is the famous version.</dd></div>
-        <div class="term"><span class="ml" lang="ml">കുടംപുളി</span><dt>Kudampuli</dt><span class="say">koo-DUM-poo-lee</span><dd>Malabar tamarind. A smoked, dried fruit that gives Kerala fish curry its deep, sour flavour.</dd></div>
-        <div class="term"><span class="ml" lang="ml">തോരൻ</span><dt>Thoran</dt><span class="say">THOH-run</span><dd>Finely chopped vegetables stir-fried with grated coconut, mustard seeds and curry leaves. Dry, light and everyday.</dd></div>
-        <div class="term"><span class="ml" lang="ml">പായസം</span><dt>Payasam</dt><span class="say">PAH-yuh-sum</span><dd>A slow-cooked sweet pudding, often made with jaggery and coconut milk or with milk and rice. The last course of a sadya.</dd></div>
-        <div class="term"><span class="ml" lang="ml">നിലവിളക്ക്</span><dt>Nilavilakku</dt><span class="say">NEE-luh-vi-luck</span><dd>The traditional brass oil lamp of Kerala, lit for auspicious beginnings and found in homes and temples.</dd></div>
+        <div class="term"><span class="ml" lang="ml">പുട്ട്</span><dt>Puttu</dt><span class="say">POOT-too</span><dd>Ground rice layered with grated coconut and steamed in a cylinder. Eaten with kadala (black chickpea curry) or beef fry.</dd></div>
+        <div class="term"><span class="ml" lang="ml">കപ്പ</span><dt>Kappa</dt><span class="say">KUP-pah</span><dd>Tapioca. Boiled and mashed to eat with fish or beef curry, or cooked with meat and masala into kappa biriyani.</dd></div>
+        <div class="term"><span class="ml" lang="ml">ഉലർത്തിയത്</span><dt>Ularthiyathu</dt><span class="say">oo-LUR-thi-ya-thu</span><dd>Meat roasted slowly in a pan with coconut slices, pepper and curry leaves until dark and dry.</dd></div>
+        <div class="term"><span class="ml" lang="ml">കൊണ്ടാട്ടം</span><dt>Kondattam</dt><span class="say">kon-DAHT-tum</span><dd>Food that is marinated, sun-dried and then fried until crisp.</dd></div>
+        <div class="term"><span class="ml" lang="ml">പ്രഥമൻ</span><dt>Pradhaman</dt><span class="say">PRUH-thuh-mun</span><dd>The richest kind of payasam, slow-cooked with jaggery and thick coconut milk. Ada and chakka (jackfruit) are the classics.</dd></div>
     </dl>
   </div>
 </section>
 
 <nav class="next-page" aria-label="Next page">
-  <div class="wrap"><a href="gallery.html"><span><small>Next</small><strong>Gallery</strong></span><span class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></div>
+  <div class="wrap"><a href="drinks.html"><span><small>Next</small><strong>Drinks</strong></span><span class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></div>
 </nav>
 
 </main>
@@ -128,6 +129,7 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="story.html">Our Story</a></li>
         <li><a href="menu.html">Menu</a></li>
+        <li><a href="drinks.html">Drinks</a></li>
         <li><a href="gallery.html">Gallery</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>

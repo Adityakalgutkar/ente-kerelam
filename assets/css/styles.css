@@ -449,3 +449,47 @@ section{position:relative}
 }
 
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+
+/* ================= Real menu list ================= */
+.menu-list,.drink-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:clamp(32px,5vw,64px);border-top:1px solid var(--line)}
+.mi,.drink{display:flex;gap:16px;align-items:flex-start;padding:18px 0;border-bottom:1px solid var(--line);min-width:0}
+.mi-thumb{flex:none;width:64px;height:64px;border-radius:50%;overflow:hidden;background:var(--paper)}
+.mi-thumb img{width:100%;height:100%;object-fit:cover}
+.mi-body,.drink-body{flex:1;min-width:0}
+.mi-top{display:flex;align-items:baseline;gap:10px}
+.mi-top h3{font-family:var(--f-display);font-size:1.2rem;line-height:1.25;display:flex;gap:10px;align-items:baseline;min-width:0}
+.mi-top h3 .veg-mark{transform:translateY(1px)}
+.mi-dots{flex:1 1 16px;min-width:16px;border-bottom:1px dotted color-mix(in srgb,var(--ink) 30%,transparent);transform:translateY(-5px)}
+.mi .price,.drink .price{flex:none}
+.mi p,.drink p{font-size:.92rem;color:var(--ink-soft);margin-top:4px;max-width:46ch}
+.menu-empty{grid-column:1/-1;padding:36px 0;color:var(--ink-soft)}
+.menu-foot a:not(.btn){color:var(--teak)}
+
+/* ================= Drinks page ================= */
+.drink-photos{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr 1.3fr;gap:clamp(10px,1.4vw,16px);align-items:end}
+.dp{margin:0;display:flex;flex-direction:column;gap:8px;min-width:0}
+.dp img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:4px}
+.dp:nth-child(odd) img{aspect-ratio:4/5}
+.dp figcaption{font-size:.78rem;color:var(--ink-soft)}
+.drink{gap:18px;padding:22px 0}
+.glass{flex:none;width:30px;height:48px;color:color-mix(in srgb,var(--ink) 45%,transparent);margin-top:2px}
+.drink-note{display:block;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;font-weight:600;color:var(--teak);margin-top:4px}
+.drink-note b{display:inline-block;margin-left:8px;padding:2px 8px;border-radius:999px;background:var(--brass);color:#14231b;letter-spacing:.08em;font-size:.66rem;vertical-align:1px}
+.on-dark .drink-list,.on-dark .drink{border-color:rgba(239,232,216,.14)}
+.on-dark .mi-top h3{color:var(--on-forest)}
+.on-dark .drink p{color:var(--on-forest-soft)}
+.on-dark .drink-note{color:var(--brass-soft)}
+.on-dark .price{color:var(--brass-soft)}
+.on-dark .mi-dots{border-color:rgba(239,232,216,.25)}
+.on-dark .glass{color:rgba(239,232,216,.55)}
+.drinks-more{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:20px 40px}
+.drinks-more h2{font-size:var(--s-3);font-size:clamp(1.6rem,3vw,2.4rem);margin-top:12px}
+.drinks-more p{color:var(--ink-soft);margin-top:12px;max-width:52ch}
+
+@media (max-width:1120px) and (min-width:901px){.nav-links{gap:20px}.nav-panel{gap:22px!important}.nav-cta{padding-inline:1em}}
+@media (max-width:760px){
+  .menu-list,.drink-list{grid-template-columns:1fr}
+  .drink-photos{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:62%;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:6px}
+  .dp{scroll-snap-align:start}
+  .mi-thumb{width:52px;height:52px}
+}

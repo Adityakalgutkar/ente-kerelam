@@ -56,6 +56,9 @@ $("#social-list").innerHTML = SITE.social.map(s => s.url
 $("#credits-list").innerHTML = CREDITS.map(c => `<li><a href="${esc(c.u)}" target="_blank" rel="noopener">${esc(c.t)}</a> · ${esc(c.a)} · ${c.lu ? `<a href="${esc(c.lu)}" target="_blank" rel="noopener">${esc(c.l)}</a>` : esc(c.l)}</li>`).join("");
 $("#year").textContent = new Date().getFullYear();
 
+const fmtPrice = p => p == null ? "₹ —" : (typeof p === "number" ? "₹" + p : p);
+const vegMark = veg => `<span class="veg-mark${veg ? "" : " nv"}" role="img" aria-label="${veg ? "Vegetarian" : "Non-vegetarian"}"></span>`;
+
 /* Menu page */
 if ($("#menu-tabs")) {
 const tabsEl = $("#menu-tabs"), gridEl = $("#menu-grid"), introEl = $("#menu-intro");
@@ -69,17 +72,15 @@ function showCategory(id){
   currentCat = cat.id;
   const vegOnly = $("#veg-only").checked;
   const items = cat.items.filter(d => !vegOnly || d.veg);
-  if (!items.length){ gridEl.innerHTML = `<p class="menu-empty">No vegetarian dishes in ${esc(cat.label)} on the sample menu. Try another section.</p>`; return; }
-  gridEl.innerHTML = items.map(d => `
-    <article class="dish">
-      <figure class="photo ${d.tone || "t-leaf"}" data-dish style="margin:0"></figure>
-      <div class="dish-body">
-        <div class="dish-top"><h3><span class="veg-mark${d.veg ? "" : " nv"}" role="img" aria-label="${d.veg ? "Vegetarian" : "Non-vegetarian"}" style="display:inline-grid;vertical-align:3px;margin-right:10px"></span>${esc(d.name)}</h3><span class="price">${d.price != null ? "₹" + d.price : "₹ —"}</span></div>
+  if (!items.length){ gridEl.innerHTML = `<li class="menu-empty">No vegetarian dishes in ${esc(cat.label)}. Try another section.</li>`; return; }
+  gridEl.innerHTML = items.map((d,i) => `
+    <li class="mi${d.photo ? " has-photo" : ""}">
+      ${d.photo ? `<span class="mi-thumb"><img src="${esc(d.photo)}" alt="" loading="lazy" decoding="async"></span>` : ""}
+      <div class="mi-body">
+        <div class="mi-top"><h3>${vegMark(d.veg)}<span>${esc(d.name)}</span></h3><span class="mi-dots" aria-hidden="true"></span><span class="price">${esc(fmtPrice(d.price))}</span></div>
         <p>${esc(d.desc)}</p>
-        <div class="tags">${d.sample !== false ? '<span class="tag sample">Sample</span>' : ""}<span class="tag ${d.veg ? "veg" : ""}">${d.veg ? "Vegetarian" : "Non-veg"}</span></div>
       </div>
-    </article>`).join("");
-  $$("[data-dish]", gridEl).forEach((el,i) => { const d = items[i]; fillPhoto(el, { src:d.photo||"", alt:d.name, brief:d.name }); });
+    </li>`).join("");
 }
 tabsEl.addEventListener("click", e => { const t = e.target.closest(".tab"); if (t){ showCategory(t.dataset.id); try { history.replaceState(null, "", "#" + t.dataset.id); } catch(err){} } });
 tabsEl.addEventListener("keydown", e => {
@@ -97,20 +98,35 @@ $("#veg-only").addEventListener("change", () => showCategory(currentCat));
 /* Home: menu preview */
 const previewEl = $("#menu-preview");
 if (previewEl){
-  const picks = [["breakfast","Appam & Stew"],["sadya","Sadya on Banana Leaf"],["coast","Karimeen Pollichathu"]];
+  const picks = [["dinner","Chatti Choru"],["dinner","Parotta with Beef Roast"],["breakfast","Puttu with Kadala Curry"]];
   const dishes = picks.map(([cid, name]) => { const c = MENU.find(x => x.id === cid); const d = c && c.items.find(i => i.name === name); return d && { ...d, cid, cat: c.label }; }).filter(Boolean);
   previewEl.innerHTML = dishes.map(d => `
     <article class="dish">
-      <figure class="photo ${d.tone || "t-leaf"}" data-pdish style="margin:0"></figure>
+      <figure class="photo t-leaf" data-pdish style="margin:0"></figure>
       <div class="dish-body">
         <span class="eyebrow">${esc(d.cat)}</span>
-        <div class="dish-top"><h3><a href="menu.html#${d.cid}">${esc(d.name)}</a></h3><span class="price">${d.price != null ? "₹" + d.price : "₹ —"}</span></div>
+        <div class="dish-top"><h3><a href="menu.html#${d.cid}">${esc(d.name)}</a></h3><span class="price">${esc(fmtPrice(d.price))}</span></div>
         <p>${esc(d.desc)}</p>
-        <div class="tags">${d.sample !== false ? '<span class="tag sample">Sample</span>' : ""}<span class="tag ${d.veg ? "veg" : ""}">${d.veg ? "Vegetarian" : "Non-veg"}</span></div>
+        <div class="tags"><span class="tag ${d.veg ? "veg" : ""}">${d.veg ? "Vegetarian" : "Non-veg"}</span></div>
       </div>
     </article>`).join("");
   $$("[data-pdish]", previewEl).forEach((el, i) => fillPhoto(el, { src: dishes[i].photo || "", alt: dishes[i].name, brief: dishes[i].name }));
 }
+
+/* Drinks page */
+const glassSVG = c => `<svg class="glass" viewBox="0 0 40 64" aria-hidden="true"><path d="M8 6h24l-3 50a3 3 0 0 1-3 3H14a3 3 0 0 1-3-3z" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M10.2 22h19.6l-2.2 33.5a2 2 0 0 1-2 1.9H14.4a2 2 0 0 1-2-1.9z" fill="${c}"/><path d="M14 26v26" stroke="rgba(255,255,255,.45)" stroke-width="1.6" stroke-linecap="round"/></svg>`;
+[["#drinks-mocktails","mocktails"],["#drinks-cocktails","cocktails"]].forEach(([sel, key]) => {
+  const el = $(sel); if (!el || !DRINKS[key]) return;
+  el.innerHTML = DRINKS[key].map(d => `
+    <li class="drink${d.signature ? " is-signature" : ""}">
+      ${glassSVG(esc(d.colour || "#b38a4c"))}
+      <div class="drink-body">
+        <div class="mi-top"><h3><span>${esc(d.name)}</span></h3><span class="mi-dots" aria-hidden="true"></span><span class="price">${esc(fmtPrice(d.price))}</span></div>
+        <span class="drink-note">${esc(d.note)}${d.signature ? ' <b>Signature</b>' : ""}</span>
+        <p>${esc(d.desc)}</p>
+      </div>
+    </li>`).join("");
+});
 
 /* Gallery page */
 if ($("#gallery-grid")) {
