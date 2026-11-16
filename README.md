@@ -1,6 +1,6 @@
 # Ente Keralam
 
-Pre-launch website for **Ente Keralam**, a Central Travancore Nasrani (Kerala) restaurant opening soon in Mapusa, Goa.
+Website for **Ente Keralam**, a Central Travancore Nasrani (Kerala) restaurant, now open in Mapusa, Goa.
 
 ## Draft handoff
 
@@ -11,7 +11,7 @@ Pre-launch website for **Ente Keralam**, a Central Travancore Nasrani (Kerala) r
 |---|---|---|
 | `index.html` | Home | Hero, launch line, dish marquee, story intro, menu preview, The Kerala Experience, visit band |
 | `story.html` | Our Story | The name and Kerala cooking, The Kerala Experience |
-| `menu.html` | Menu | Opening menu (8 sections) with veg filter, glossary of terms on the menu |
+| `menu.html` | Menu | Menu (8 sections) with veg filter, glossary of terms on the menu |
 | `drinks.html` | Drinks | The Heritage Drinks Collection: 7 mocktails, 5 cocktails |
 | `gallery.html` | Gallery | Photo grid with captions and a full-screen viewer |
 | `contact.html` | Contact | Location, contact placeholders, WhatsApp, map placeholder |
@@ -30,15 +30,15 @@ The header, footer and mobile action bar are repeated in each HTML file; change 
 
 ## What's on the site
 - Sticky nav with Reserve a Table CTA; mobile menu and a bottom action bar on phones (Menu / Directions / Reserve)
-- Hero: "Kerala's flavours. Now in Mapusa." with coming-soon indicator, Discover Our Menu and Find Us CTAs
-- Launch line band and a scrolling strip of dish names in English and Malayalam
+- Hero: "Kerala's flavours. Now in Mapusa." with a "Now open" indicator, Discover Our Menu and Find Us CTAs
+- Welcome band ("Mapusa, Kerala is here.") and a scrolling strip of dish names in English and Malayalam
 - Our Story: introduces the name (എന്റെ കേരളം, "my Kerala") and Central Travancore Nasrani cooking; no founder story or history
-- Menu: the opening menu in 8 sections (Breakfast, Lunch, Dinner, Starters, Snacks, Sweets, Tea/coffee/juices, Kerala coolers) with prices, veg/non-veg marks, a vegetarian filter and photos for 21 dishes
+- Menu: the full menu in 8 sections (Breakfast, Lunch, Dinner, Starters, Snacks, Sweets, Tea/coffee/juices, Kerala coolers) with prices, veg/non-veg marks, a vegetarian filter and photos for 21 dishes
 - Drinks: The Heritage Drinks Collection, 7 mocktails and 5 cocktails, with colour-coded glass icons and a photo strip
 - New to Kerala food?: glossary of 8 terms from the menu (Nasrani, chatti choru, appam, puttu, kappa, ularthiyathu, kondattam, pradhaman)
 - The Kerala Experience: banana leaf, coconut, coast, lamp-lit warmth
 - Gallery: 8 photos with captions and a viewer with previous/next and swipe
-- Find Us: Mapusa, Goa; address, phone, WhatsApp and hours all "To be announced"; Google Maps search link
+- Find Us: Mapusa, Goa; address, phone, WhatsApp and hours show "To be added" until filled in; Google Maps search link
 - Footer: navigation, visit details, social placeholders, photo credits
 - Draft preview strip at the top of every page (turn off with `draft: false` in `content.js`)
 
@@ -63,7 +63,7 @@ Current images are Creative Commons photos from Wikimedia Commons (mostly CC BY-
 - Logo (currently the name set in type)
 - Own food and interior photography
 - Answers to the menu questions below
-- Address, phone, WhatsApp, opening hours, opening date
+- Address, phone, WhatsApp number and opening hours (the site shows "To be added" until these are filled in)
 - Instagram / Facebook / Google Business links and exact Google Maps link
 - Founder or chef story, if they want one
 - Domain and hosting

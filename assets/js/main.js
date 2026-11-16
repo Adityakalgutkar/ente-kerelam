@@ -4,7 +4,7 @@
 const $ = (s, r=document) => r.querySelector(s);
 const $$ = (s, r=document) => [...r.querySelectorAll(s)];
 const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
-const TBA = '<span class="tba">To be announced</span>';
+const TBA = '<span class="tba">To be added</span>';
 
 function fillPhoto(el, p){
   if (!el || !p) return;
@@ -28,8 +28,8 @@ const facts = {
   phone: SITE.phone ? esc(SITE.phone) : TBA,
   whatsappDisplay: SITE.whatsapp ? esc("+" + SITE.whatsapp.replace(/\D/g,"")) : TBA,
   hours: SITE.hours ? esc(SITE.hours) : TBA,
-  hoursShort: SITE.hours ? esc(SITE.hours) : 'Hours <span class="soon">to be announced</span>',
-  phoneShort: SITE.phone ? esc(SITE.phone) : 'Phone <span class="soon">to be announced</span>'
+  hoursShort: SITE.hours ? esc(SITE.hours) : 'Hours <span class="soon">to be added</span>',
+  phoneShort: SITE.phone ? esc(SITE.phone) : 'Phone <span class="soon">to be added</span>'
 };
 $$("[data-site]").forEach(el => el.innerHTML = facts[el.dataset.site] ?? "");
 
@@ -44,7 +44,7 @@ if (waBtn && waLink){
   span.className = waBtn.className; span.style.opacity = ".55"; span.style.cursor = "default";
   span.setAttribute("aria-disabled","true");
   span.innerHTML = waBtn.innerHTML;
-  span.querySelector("#wa-label").textContent = "WhatsApp opens at launch";
+  span.querySelector("#wa-label").textContent = "WhatsApp number to be added";
   waBtn.replaceWith(span);
 }
 if ($("#maps-btn")) $("#maps-btn").href = SITE.mapsUrl;

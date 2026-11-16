@@ -1,6 +1,6 @@
 /* =====================================================================
    CONTENT CONFIG — edit these to update the site. Nothing else needs
-   to change. Empty strings show as "To be announced".
+   to change. Empty strings show as "To be added".
    ===================================================================== */
 const SITE = {
   address: "",                       // e.g. "Shop 4, Main Road, Mapusa, Goa 403507"
@@ -14,7 +14,7 @@ const SITE = {
     { name: "Google",    url: "" }
   ],
   whatsappMessage: "Hi Ente Keralam! I'd like to reserve a table.",
-  draft: true                        // shows the "Draft preview" strip; set false for launch
+  draft: true                        // shows the "Draft preview" strip; set false when the site goes live
 };
 
 /* Photos: current images are Creative Commons photos from Wikimedia Commons (credited in the footer).
@@ -41,7 +41,7 @@ const GALLERY = [
   { src:"images/g-payasam.jpg", alt:"Paal payasam", brief:"Payasam in brass uruli", tone:"t-sea" }
 ];
 
-/* MENU — the Ente Keralam opening menu (Central Travancore Nasrani cuisine).
+/* MENU — the Ente Keralam menu (Central Travancore Nasrani cuisine).
    price: a number in rupees, or text such as "₹290 / ₹380". veg: true / false.
    photo: optional; dishes with a photo show a thumbnail. */
 const MENU = [
